@@ -43,6 +43,7 @@ object HmrcBuild extends Build {
       crossScalaVersions := Seq("2.11.7")
     )
     .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
+    .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
 }
 
 object Dependencies {
