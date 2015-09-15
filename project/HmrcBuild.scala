@@ -34,7 +34,7 @@ object HmrcBuild extends Build {
     .enablePlugins(play.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
     .settings(
       name := appName,
-      targetJvm := "jvm-1.7",
+      scalaVersion := "2.11.7",
       libraryDependencies ++= appDependencies,
       resolvers := Seq(
         Resolver.bintrayRepo("hmrc", "releases"),
