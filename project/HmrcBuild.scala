@@ -26,7 +26,7 @@ object HmrcBuild extends Build {
   import uk.gov.hmrc.DefaultBuildSettings._
   import play.sbt.routes.RoutesKeys.routesGenerator
 
-  val appName = "govuk-template-25"
+  val appName = "govuk-template"
 
   val appDependencies = Seq(
     Compile.play
