@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import play.routes.compiler.StaticRoutesGenerator
 import sbt.Keys._
 import sbt.{Build, _}
 import uk.gov.hmrc.SbtAutoBuildPlugin
@@ -23,6 +24,7 @@ object HmrcBuild extends Build {
 
   import Dependencies._
   import uk.gov.hmrc.DefaultBuildSettings._
+  import play.sbt.routes.RoutesKeys.routesGenerator
 
   val appName = "govuk-template"
 
@@ -31,7 +33,7 @@ object HmrcBuild extends Build {
   )
 
   lazy val library = Project(appName, file("."))
-    .enablePlugins(play.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
+    .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
     .settings(
       name := appName,
       scalaVersion := "2.11.7",
@@ -40,7 +42,8 @@ object HmrcBuild extends Build {
         Resolver.bintrayRepo("hmrc", "releases"),
         Resolver.typesafeRepo("releases")
       ),
-      crossScalaVersions := Seq("2.11.7")
+      crossScalaVersions := Seq("2.11.7"),
+      routesGenerator := StaticRoutesGenerator
     )
     .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
     .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
