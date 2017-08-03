@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <title>
+        {{#pageTitle}}
+        {{ pageTitle }}
+        {{/pageTitle}}
+        {{^pageTitle}}
+        GOV.UK - The best place to find government services and information
+        {{/pageTitle}}
+    </title>
+
+    <script type="text/javascript">
+        (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    </script>
+
+
+    <!--[if gt IE 8]><!--><link href="/template/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="/template/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="/template/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="/template/assets/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <link href="/template/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 8]>
+    <script type="text/javascript">
+        (function(){if(window.opera){return;}
+            setTimeout(function(){var a=document,g,b={families:(g=
+                            ["nta"]),urls:["/template/assets/stylesheets/fonts-ie8.css"]},
+                    c="/template/assets/javascripts/vendor/goog/webfont-debug.js",d="script",
+                    e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+                    ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+                    .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+        })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="/template/assets/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+
+    <!--[if lt IE 9]>
+    <script src="/template/assets/javascripts/ie.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/template/assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/assets/images/apple-touch-icon-144x144.png">
+    <!-- For iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/assets/images/apple-touch-icon-114x114.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/assets/images/apple-touch-icon-72x72.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="/template/assets/images/apple-touch-icon-57x57.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/template/assets/images/opengraph-image.png">
+
+    <!-- head -->
+    <!--[if lt IE 8 ]>
+    {{#assetsPath}}
+    <link rel='stylesheet' href='{{assetsPath}}stylesheets/application-ie7.min.css' />
+    {{/assetsPath}}
+    {{^assetsPath}}
+    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application-ie7.min.css' />
+    {{/assetsPath}}
+    <![endif]-->
+    <!--[if IE 8 ]>
+    {{#assetsPath}}
+    <link rel='stylesheet' href='{{assetsPath}}stylesheets/application-ie.min.css' />
+    {{/assetsPath}}
+    {{^assetsPath}}
+    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application-ie.min.css' />
+    {{/assetsPath}}
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    {{#assetsPath}}
+    <link rel='stylesheet' href='{{assetsPath}}stylesheets/application.min.css' />
+    {{/assetsPath}}
+    {{^assetsPath}}
+    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application.min.css' />
+    {{/assetsPath}}
+    <!--<![endif]-->
+
+
+    {{#linkElems}}
+    {{#url}}
+        <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
+    {{/url}}
+    {{/linkElems}}
+
+    {{#optimizelyProjectId}}
+    <script src='{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js' type='text/javascript'></script>
+    {{/optimizelyProjectId}}
+    <script src='/assets/2.246.0/javascripts/vendor/modernizr.js' type='text/javascript'></script>
+
+</head>
+
+<body>
+<script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+<div id="skiplink-container">
+    <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+    </div>
+</div>
+
+
+<header role="banner" id="global-header" class="with-proposition">
+    <div class="header-wrapper">
+        <div class="header-global">
+            <div class="header-logo">
+                <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" data-journey-click="header:Click:GOV UK" id="logo" class="content">
+                    <img src="/template/assets/images/gov.uk_logotype_crown.png" alt=""> GOV.UK
+                </a>
+            </div>
+        </div>
+        <div class="header-proposition">
+            <div class="content">
+                {{#hasNavLinks}}
+                <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+                {{/hasNavLinks}}
+                <nav id="proposition-menu" class="header__menu" role="navigation">
+                    {{#navTitleLink}}
+                    <a href="{{navTitleLink}}" class="header__menu__proposition-name">{{navTitle}}</a>
+                    {{/navTitleLink}}
+                    {{^navTitleLink}}
+                    {{#navTitle}}
+                    <span class="header__menu__proposition-name">{{navTitle}}</span>
+                    {{/navTitle}}
+                    {{/navTitleLink}}
+                    {{#hasNavLinks}}
+                    <ul id="proposition-links" class="header__menu__proposition-links">
+                    {{#navLinks}}
+                    {{#url}}
+                    {{#text}}
+                    {{#desktopHidden}}
+                    <li class="desktop-hidden"><a href="{{{url}}}">{{text}}</a></li>
+                    {{/desktopHidden}}
+                    {{^desktopHidden}}
+                    <li><a href="{{{url}}}">{{text}}</a></li>
+                    {{/desktopHidden}}
+                    {{/text}}
+                    {{/url}}
+                    {{/navLinks}}
+                    </ul>
+                    {{/hasNavLinks}}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--end header-->
+
+<div id="global-cookie-message">
+    <!-- Changed href of cookies to be relative path -->
+    <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+</div>
+
+<main id="wrapper" role="main" {{#mainClass}}class="{{mainClass}}"{{/mainClass}} {{{mainAttributes}}}>
+  <div id="content">
+        {{^removeServiceInfo}}
+        <div class="service-info">
+            {{#betaBanner}}
+            <div class="beta-banner">
+                <p>
+                    <strong class="phase-tag">BETA</strong>
+                    <span>This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                        {{#feedbackIdentifier}}
+                           - your <a id="feedback-link"
+                           href="beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
+                           data-sso="false"
+                           data-journey-click="other-global:Click:Feedback">feedback</a> will help us to improve it.
+                        {{/feedbackIdentifier}}
+                    </span>
+                </p>
+            </div>
+            {{/betaBanner}}
+            {{#includeHMRCBranding}}
+            <div class="logo">
+                <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span>
+            </div>
+            {{/includeHMRCBranding}}
+            {{#showLastLogInStatus}}
+            <div class="last-login">
+                    {{#userDisplayName}}
+                    {{^previouslyLoggedInAt}}
+                    {{{userDisplayName}}}, this is the first time you have logged in.
+                    {{/previouslyLoggedInAt}}
+                    {{#previouslyLoggedInAt}}
+                    {{{userDisplayName}}}, you last signed in {{{previouslyLoggedInAt}}}.
+                    {{/previouslyLoggedInAt}}
+                    {{/userDisplayName}}
+                    {{#logoutUrl}}
+                    <br><a id="logOutStatusHref" href="{{logoutUrl}}">Sign out</a>
+                    {{/logoutUrl}}
+                </p>
+            </div>
+            {{/showLastLogInStatus}}
+        </div>
+
+        {{/removeServiceInfo}}
+
+        {{{ actingAttorneyBanner }}}
+
+        {{{ mainContentHeader }}}
+
+        {{{ article }}}
+
+        {{{ sidebar }}}
+
+        {{{ getHelpForm }}}
+
+    </div>
+</main>
+
+<footer class="group js-footer" id="footer" role="contentinfo">
+
+    <div class="footer-wrapper">
+        {{{ footerTop }}}
+
+        <div class="footer-meta">
+            <div class="footer-meta-inner">
+                <ul class="platform-help-links">
+                    <li><a href='/help/cookies' target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">Cookies</a></li>
+                    <li><a href='/help/privacy' target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">Privacy policy</a></li>
+                    <li><a href='/help/terms-and-conditions' target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">Terms and conditions</a></li>
+                    <li><a href='https://www.gov.uk/help' target="_blank" data-sso="false" data-journey-click="footer:Click:Help">Help using GOV.UK</a></li>
+                    {{#additionalFooterLinks}}
+                    {{#url}}
+                    {{#text}}
+                    <li><a href="{{{url}}}">{{text}}</a></li>
+                    {{/text}}
+                    {{/url}}
+                    {{/additionalFooterLinks}}
+                </ul>
+
+                <div class="open-government-licence">
+                    <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank"><img src="/assets/2.246.0/images/open-government-licence_2x.png" alt="Open Government Licence"></a></h2>
+                    <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--end footer-->
+
+<div id="global-app-error" class="app-error hidden"></div>
+
+{{#googleAnalytics}}
+    {{#trackingId}}
+        <script type="text/javascript">
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{trackingId}}', '{{#cookieDomain}}{{cookieDomain}}{{/cookieDomain}}{{^cookieDomain}}auto{{/cookieDomain}}');
+            ga('set', 'anonymizeIp', true)
+
+            {{#authProvider}}    ga('set', 'dimension38', '{{{authProvider}}}'); {{/authProvider}}
+            {{#confidenceLevel}} ga('set', 'dimension39', '{{{confidenceLevel}}}'); {{/confidenceLevel}}
+
+            ga('send', 'pageview');
+            ga('set', 'nonInteraction', true);
+
+        </script>
+    {{/trackingId}}
+{{/googleAnalytics}}
+
+{{#ssoUrl}}
+    <script type="text/javascript">var ssoUrl = "{{ssoUrl}}";</script>
+{{/ssoUrl}}
+
+{{#assetsPath}}
+<script src="{{assetsPath}}javascripts/application.min.js" type="text/javascript"></script>
+{{/assetsPath}}
+{{^assetsPath}}
+<script src="/assets/2.246.0/javascripts/application.min.js" type="text/javascript"></script>
+{{/assetsPath}}
+
+<!--<script src="/template/assets/javascripts/govuk-template.js" type="text/javascript"></script>-->
+{{#scriptElems}}
+    {{#url}}
+    <script src="{{url}}" type="text/javascript"></script>
+    {{/url}}
+{{/scriptElems}}
+
+{{#inlineScriptElems}}
+<script>{{{script}}}</script>
+{{/inlineScriptElems}}
+
+
+</body>
+</html>
