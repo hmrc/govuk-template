@@ -133,16 +133,6 @@ fieldset {
   border: none;
   padding: 0; }
 
-a,
-a:visited {
-  color: #2e3191; }
-
-a:hover {
-  color: #2e8aca; }
-
-a:active {
-  color: #2e8aca; }
-
 a[rel="external"]:after {
   background-image: url(external-link.png);
   background-repeat: no-repeat; }
