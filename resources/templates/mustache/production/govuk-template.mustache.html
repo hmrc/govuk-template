@@ -67,7 +67,7 @@
     <link rel='stylesheet' href='{{assetsPath}}stylesheets/application-ie7.min.css' />
     {{/assetsPath}}
     {{^assetsPath}}
-    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application-ie7.min.css' />
+    <link rel='stylesheet' href='/assets/2.247.0/stylesheets/application-ie7.min.css' />
     {{/assetsPath}}
     <![endif]-->
     <!--[if IE 8 ]>
@@ -75,7 +75,7 @@
     <link rel='stylesheet' href='{{assetsPath}}stylesheets/application-ie.min.css' />
     {{/assetsPath}}
     {{^assetsPath}}
-    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application-ie.min.css' />
+    <link rel='stylesheet' href='/assets/2.247.0/stylesheets/application-ie.min.css' />
     {{/assetsPath}}
     <![endif]-->
     <!--[if gt IE 8]><!-->
@@ -83,7 +83,7 @@
     <link rel='stylesheet' href='{{assetsPath}}stylesheets/application.min.css' />
     {{/assetsPath}}
     {{^assetsPath}}
-    <link rel='stylesheet' href='/assets/2.246.0/stylesheets/application.min.css' />
+    <link rel='stylesheet' href='/assets/2.247.0/stylesheets/application.min.css' />
     {{/assetsPath}}
     <!--<![endif]-->
 
@@ -97,8 +97,13 @@
     {{#optimizelyProjectId}}
     <script src='{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js' type='text/javascript'></script>
     {{/optimizelyProjectId}}
-    <script src='/assets/2.246.0/javascripts/vendor/modernizr.js' type='text/javascript'></script>
 
+    {{#assetsPath}}
+    <script src='{{assetsPath}}javascripts/vendor/modernizr.js' type='text/javascript'></script>
+    {{/assetsPath}}
+    {{^assetsPath}}
+    <script src='/assets/2.247.0/javascripts/vendor/modernizr.js' type='text/javascript'></script>
+    {{/assetsPath}}
 </head>
 
 <body>
@@ -241,7 +246,15 @@
                 </ul>
 
                 <div class="open-government-licence">
-                    <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank"><img src="/assets/2.246.0/images/open-government-licence_2x.png" alt="Open Government Licence"></a></h2>
+                    <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">
+                        {{#assetsPath}}
+                        <img src="{{assetsPath}}images/open-government-licence_2x.png" alt="Open Government Licence">
+                        {{/assetsPath}}
+                        {{^assetsPath}}
+                        <img src="/assets/2.247.0/images/open-government-licence_2x.png" alt="Open Government Licence">
+                        {{/assetsPath}}
+                    </a>
+                    </h2>
                     <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated</p>
                 </div>
             </div>
@@ -287,7 +300,7 @@
 <script src="{{assetsPath}}javascripts/application.min.js" type="text/javascript"></script>
 {{/assetsPath}}
 {{^assetsPath}}
-<script src="/assets/2.246.0/javascripts/application.min.js" type="text/javascript"></script>
+<script src="/assets/2.247.0/javascripts/application.min.js" type="text/javascript"></script>
 {{/assetsPath}}
 
 <!--<script src="/template/assets/javascripts/govuk-template.js" type="text/javascript"></script>-->
