@@ -135,13 +135,13 @@ fieldset {
 
 a,
 a:visited {
-  color: #2e3191; }
+  color: #4c2c92; }
 
 a:hover {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 a:active {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 a[rel="external"]:after {
   background-image: url(external-link.png);
