@@ -281,8 +281,62 @@
             ga('create', '{{trackingId}}', '{{#cookieDomain}}{{cookieDomain}}{{/cookieDomain}}{{^cookieDomain}}auto{{/cookieDomain}}');
             ga('set', 'anonymizeIp', true)
 
-            {{#authProvider}}    ga('set', 'dimension38', '{{{authProvider}}}'); {{/authProvider}}
-            {{#confidenceLevel}} ga('set', 'dimension39', '{{{confidenceLevel}}}'); {{/confidenceLevel}}
+            {{#fullPagePath}}                               ga('set', 'dimension1', '{{{fullPagePath}}}');                                {{/fullPagePath}}
+            {{#taxType}}                                    ga('set', 'dimension2', '{{{taxType}}}');                                     {{/taxType}}
+            {{#cardType}}                                   ga('set', 'dimension3', '{{{cardType}}}');                                    {{/cardType}}
+            {{#userStatus}}                                 ga('set', 'dimension4', '{{{userStatus}}}');                                  {{/userStatus}}
+            {{#experimentCohorts}}                          ga('set', 'dimension5', '{{{experimentCohorts}}}');                           {{/experimentCohorts}}
+            {{#identityVerificationLoginOrigin}}            ga('set', 'dimension6', '{{{identityVerificationLoginOrigin}}}');             {{/identityVerificationLoginOrigin}}
+            {{#scenarioType}}                               ga('set', 'dimension7', '{{{scenarioType}}}');                                {{/scenarioType}}
+            {{#forecastValue}}                              ga('set', 'dimension8', '{{{forecastValue}}}');                               {{/forecastValue}}
+            {{#qualifyingYears}}                            ga('set', 'dimension10', '{{{qualifyingYears}}}');                            {{/qualifyingYears}}
+            {{#gaps}}                                       ga('set', 'dimension11', '{{{gaps}}}');                                       {{/gaps}}
+            {{#payableGaps}}                                ga('set', 'dimension12', '{{{payableGaps}}}');                                {{/payableGaps}}
+            {{#yearsToContribute}}                          ga('set', 'dimension13', '{{{yearsToContribute}}}');                          {{/yearsToContribute}}
+            {{#contractedOut}}                              ga('set', 'dimension14', '{{{contractedOut}}}');                              {{/contractedOut}}
+            {{#statePensionAge}}                            ga('set', 'dimension15', '{{{statePensionAge}}}');                            {{/statePensionAge}}
+            {{#copeAmount}}                                 ga('set', 'dimension16', '{{{copeAmount}}}');                                 {{/copeAmount}}
+            {{#startDate}}                                  ga('set', 'dimension17', '{{{startDate}}}');                                  {{/startDate}}
+            {{#returnCount}}                                ga('set', 'dimension18', '{{{returnCount}}}');                                {{/returnCount}}
+            {{#referenceNumber}}                            ga('set', 'dimension19', '{{{referenceNumber}}}');                            {{/referenceNumber}}
+            {{#nispExclusionType}}                          ga('set', 'dimension20', '{{{nispExclusionType}}}');                          {{/nispExclusionType}}
+            {{#forecastOnly}}                               ga('set', 'dimension21', '{{{forecastOnly}}}');                               {{/forecastOnly}}
+            {{#authenticationProvider}}                     ga('set', 'dimension22', '{{{authenticationProvider}}}');                     {{/authenticationProvider}}
+            {{#sosOrigin}}                                  ga('set', 'dimension23', '{{{sosOrigin}}}');                                  {{/sosOrigin}}
+            {{#sosJourneyType}}                             ga('set', 'dimension24', '{{{sosJourneyType}}}');                             {{/sosJourneyType}}
+            {{#sosConfidenceValue}}                         ga('set', 'dimension25', '{{{sosConfidenceValue}}}');                         {{/sosConfidenceValue}}
+            {{#tamcMultiYearApplication}}                   ga('set', 'dimension26', '{{{tamcMultiYearApplication}}}');                   {{/tamcMultiYearApplication}}
+            {{#tamcCurrentYearOnly}}                        ga('set', 'dimension27', '{{{tamcCurrentYearOnly}}}');                        {{/tamcCurrentYearOnly}}
+            {{#tamcPreviousYearOnly}}                       ga('set', 'dimension28', '{{{tamcPreviousYearOnly}}}');                       {{/tamcPreviousYearOnly}}
+            {{#tamcTransferorChangeInYourIncome}}           ga('set', 'dimension29', '{{{tamcTransferorChangeInYourIncome}}}');           {{/tamcTransferorChangeInYourIncome}}
+            {{#tamcTransferorCancels}}                      ga('set', 'dimension30', '{{{tamcTransferorCancels}}}');                      {{/tamcTransferorCancels}}
+            {{#tamcTransferorPreviousTaxYear}}              ga('set', 'dimension31', '{{{tamcTransferorPreviousTaxYear}}}');              {{/tamcTransferorPreviousTaxYear}}
+            {{#tamcTransferorChooseStartOfYear}}            ga('set', 'dimension32', '{{{tamcTransferorChooseStartOfYear}}}');            {{/tamcTransferorChooseStartOfYear}}
+            {{#tamcTransferorChooseEndOfYear}}              ga('set', 'dimension33', '{{{tamcTransferorChooseEndOfYear}}}');              {{/tamcTransferorChooseEndOfYear}}
+            {{#tamcRecipientDivorcesCurrentYear}}           ga('set', 'dimension34', '{{{tamcRecipientDivorcesCurrentYear}}}');           {{/tamcRecipientDivorcesCurrentYear}}
+            {{#tamcRecipientDivorcesPreviousYear}}          ga('set', 'dimension35', '{{{tamcRecipientDivorcesPreviousYear}}}');          {{/tamcRecipientDivorcesPreviousYear}}
+            {{#tamcRecipientRejects}}                       ga('set', 'dimension36', '{{{tamcRecipientRejects}}}');                       {{/tamcRecipientRejects}}
+            {{#tamcRecipientRejectsEndedRelationship}}      ga('set', 'dimension37', '{{{tamcRecipientRejectsEndedRelationship}}}');      {{/tamcRecipientRejectsEndedRelationship}}
+            {{#authProvider}}                               ga('set', 'dimension38', '{{{authProvider}}}');                               {{/authProvider}}
+            {{#confidenceLevel}}                            ga('set', 'dimension39', '{{{confidenceLevel}}}');                            {{/confidenceLevel}}
+            {{#ageOnVisit}}                                 ga('set', 'dimension40', '{{{ageOnVisit}}}');                                 {{/ageOnVisit}}
+            {{#gender}}                                     ga('set', 'dimension41', '{{{gender}}}');                                     {{/gender}}
+            {{#valueOfPayment}}                             ga('set', 'dimension42', '{{{valueOfPayment}}}');                             {{/valueOfPayment}}
+            {{#reconciliationStatus}}                       ga('set', 'dimension43', '{{{reconciliationStatus}}}');                       {{/reconciliationStatus}}
+            {{#paymentStatus}}                              ga('set', 'dimension44', '{{{paymentStatus}}}');                              {{/paymentStatus}}
+            {{#dueDateOfLiability}}                         ga('set', 'dimension45', '{{{dueDateOfLiability}}}');                         {{/dueDateOfLiability}}
+            {{#callForDirectDebitAssistance}}               ga('set', 'dimension46', '{{{callForDirectDebitAssistance}}}');               {{/callForDirectDebitAssistance}}
+            {{#printApplicationCompletePage}}               ga('set', 'dimension47', '{{{printApplicationCompletePage}}}');               {{/printApplicationCompletePage}}
+            {{#clickFeedbackLinkOnApplicationCompleteSide}} ga('set', 'dimension48', '{{{clickFeedbackLinkOnApplicationCompleteSide}}}'); {{/clickFeedbackLinkOnApplicationCompleteSide}}
+            {{#voaPersonId}}                                ga('set', 'dimension49', '{{{voaPersonId}}}');                                {{/voaPersonId}}
+            {{#optimizelyTests}}                            ga('set', 'dimension50', '{{{optimizelyTests}}}');                            {{/optimizelyTests}}
+            {{#optimizely8228818209}}                       ga('set', 'dimension51', '{{{optimizely8228818209}}}');                       {{/optimizely8228818209}}
+            {{#offPayrollEndClientName}}                    ga('set', 'dimension52', '{{{offPayrollEndClientName}}}');                    {{/offPayrollEndClientName}}
+            {{#offPayrollJobTitle}}                         ga('set', 'dimension53', '{{{offPayrollJobTitle}}}');                         {{/offPayrollJobTitle}}
+            {{#valueOfIycdcPayment}}                        ga('set', 'dimension54', '{{{valueOfIycdcPayment}}}');                        {{/valueOfIycdcPayment}}
+            {{#iycdcReconciliationStatus}}                  ga('set', 'dimension55', '{{{iycdcReconciliationStatus}}}');                  {{/iycdcReconciliationStatus}}
+            {{#p800Type}}                                   ga('set', 'dimension56', '{{{p800Type}}}');                                   {{/p800Type}}
+
 
             ga('send', 'pageview');
             ga('set', 'nonInteraction', true);
