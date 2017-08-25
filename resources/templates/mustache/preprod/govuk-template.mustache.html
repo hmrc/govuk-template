@@ -90,7 +90,14 @@
 
     {{#linkElems}}
     {{#url}}
-        <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
+    {{^condition}}
+    <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
+    {{/condition}}
+    {{#condition}}
+    <!--[if {{condition}}]>
+    <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
+    <![endif]-->
+    {{/condition}}
     {{/url}}
     {{/linkElems}}
 
@@ -192,6 +199,7 @@
             {{/includeHMRCBranding}}
             {{#showLastLogInStatus}}
             <div class="last-login">
+                <p>
                     {{#userDisplayName}}
                     {{^previouslyLoggedInAt}}
                     {{{userDisplayName}}}, this is the first time you have logged in.
