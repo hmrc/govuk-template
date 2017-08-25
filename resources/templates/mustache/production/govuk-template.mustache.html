@@ -90,14 +90,14 @@
 
     {{#linkElems}}
     {{#url}}
-    {{^condition}}
+    {{^ieVersionCondition}}
     <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
-    {{/condition}}
-    {{#condition}}
-    <!--[if {{condition}}]>
+    {{/ieVersionCondition}}
+    {{#ieVersionCondition}}
+    <!--[if {{ieVersionCondition}}]>
     <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
     <![endif]-->
-    {{/condition}}
+    {{/ieVersionCondition}}
     {{/url}}
     {{/linkElems}}
 
