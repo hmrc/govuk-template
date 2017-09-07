@@ -241,7 +241,18 @@
                 <ul class="platform-help-links">
                     <li><a href='/help/cookies' target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">Cookies</a></li>
                     <li><a href='/help/privacy' target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">Privacy policy</a></li>
+
+                    {{#termsAndConditionFooterLink}}
+                    {{#url}}
+                    {{#text}}
+                    <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
+                    {{/text}}
+                    {{/url}}
+                    {{/termsAndConditionFooterLink}}
+                    {{^termsAndConditionFooterLink}}
                     <li><a href='/help/terms-and-conditions' target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">Terms and conditions</a></li>
+                    {{/termsAndConditionFooterLink}}
+
                     <li><a href='https://www.gov.uk/help' target="_blank" data-sso="false" data-journey-click="footer:Click:Help">Help using GOV.UK</a></li>
                     {{#additionalFooterLinks}}
                     {{#url}}
