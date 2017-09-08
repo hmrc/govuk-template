@@ -26,6 +26,26 @@
 
     <link href="/template/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
 
+    <style media="screen" type="text/css">
+
+        div.service-info {
+            border-bottom: 1px solid #dee0e2;
+        }
+        .service-info div.last-login {
+            float: right;
+            color: #6f777b;
+        }
+
+    </style>
+
+    <style media="screen and (min-width: 641px)" type="text/css">
+
+        .service-info div.last-login {
+            margin-top: 0.9em;
+        }
+
+    </style>
+
     <!--[if IE 8]>
     <script type="text/javascript">
         (function(){if(window.opera){return;}
@@ -200,15 +220,15 @@
             {{/includeHMRCBranding}}
             {{#showLastLogInStatus}}
             <div class="last-login">
-                <p>
-                    {{#userDisplayName}}
+                <p class="last-login__more-details text--right font-xsmall">
+
                     {{^previouslyLoggedInAt}}
-                    {{{userDisplayName}}}, this is the first time you have logged in.
+                    This is the first time you have logged in
                     {{/previouslyLoggedInAt}}
                     {{#previouslyLoggedInAt}}
-                    {{{userDisplayName}}}, you last signed in {{{previouslyLoggedInAt}}}.
+                    You last signed in {{{previouslyLoggedInAt}}}
                     {{/previouslyLoggedInAt}}
-                    {{/userDisplayName}}
+
                     {{#logoutUrl}}
                     <br><a id="logOutStatusHref" href="{{logoutUrl}}">Sign out</a>
                     {{/logoutUrl}}
