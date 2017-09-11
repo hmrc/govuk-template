@@ -202,14 +202,28 @@
             <div class="beta-banner">
                 <p>
                     <strong class="phase-tag">BETA</strong>
-                    <span>This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
-                        {{#feedbackIdentifier}}
-                           - your <a id="feedback-link"
-                           href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
-                           data-sso="false"
-                           data-journey-click="other-global:Click:Feedback">feedback</a> will help us to improve it.
-                        {{/feedbackIdentifier}}
+
+                    <span>
+                        {{#isWelsh}}
+                            Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                            {{#feedbackIdentifier}}
+                               - your <a id="feedback-link"
+                                         href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
+                                         data-sso="false"
+                                         data-journey-click="other-global:Click:Feedback">adborth</a> yn ein helpu i'w wella.
+                            {{/feedbackIdentifier}}
+                        {{/isWelsh}}
+                        {{^isWelsh}}
+                            This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                            {{#feedbackIdentifier}}
+                               - your <a id="feedback-link"
+                                         href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
+                                         data-sso="false"
+                                         data-journey-click="other-global:Click:Feedback">feedback</a> will help us to improve it.
+                            {{/feedbackIdentifier}}
+                        {{/isWelsh}}
                     </span>
+
                 </p>
             </div>
             {{/betaBanner}}
