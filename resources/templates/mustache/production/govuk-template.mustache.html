@@ -237,17 +237,46 @@
                 <p class="last-login__more-details text--right font-xsmall">
 
                     {{^previouslyLoggedInAt}}
-                    This is the first time you have logged in
+
+                        {{#isWelsh}}
+                            Dyma&#39;r tro cyntaf i chi fewngofnodi
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            This is the first time you have logged in
+                        {{/isWelsh}}
+
                     {{/previouslyLoggedInAt}}
+
                     {{#previouslyLoggedInAt}}
-                    You last signed in {{{previouslyLoggedInAt}}}
+
+                        {{#isWelsh}}
+                            Y tro diwethaf i chi fewngofnodi oedd {{{previouslyLoggedInAt}}}
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            You last signed in {{{previouslyLoggedInAt}}}
+                        {{/isWelsh}}
+
                     {{/previouslyLoggedInAt}}
 
                     {{#logoutUrl}}
-                    <br><a id="logOutStatusHref" href="{{logoutUrl}}">Sign out</a>
+                    <br>
+                    <a id="logOutStatusHref" href="{{logoutUrl}}">
+
+                        {{#isWelsh}}
+                            Allgofnodi
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            Sign out
+                        {{/isWelsh}}
+
+                    </a>
                     {{/logoutUrl}}
                 </p>
             </div>
+
             {{/showLastLogInStatus}}
         </div>
 
