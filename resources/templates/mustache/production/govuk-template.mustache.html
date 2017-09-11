@@ -303,20 +303,69 @@
         <div class="footer-meta">
             <div class="footer-meta-inner">
                 <ul class="platform-help-links">
-                    <li><a href='/help/cookies' target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">Cookies</a></li>
-                    <li><a href='/help/privacy' target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">Privacy policy</a></li>
+                    <li>
+                        <a href="/help/cookies" target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">
+
+                            {{#isWelsh}}
+                            Cwcis
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Cookies
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/help/privacy" target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">
+
+                            {{#isWelsh}}
+                            Polisi preifatrwydd
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Privacy policy
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
 
                     {{#termsAndConditionFooterLink}}
-                    {{#url}}
-                    {{#text}}
-                    <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
-                    {{/text}}
-                    {{/url}}
+                        {{#url}}
+                            {{#text}}
+                                <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
+                            {{/text}}
+                        {{/url}}
                     {{/termsAndConditionFooterLink}}
+
                     {{^termsAndConditionFooterLink}}
-                    <li><a href='/help/terms-and-conditions' target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">Terms and conditions</a></li>
+                        <li>
+                            <a href="/help/terms-and-conditions" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">
+
+                                {{#isWelsh}}
+                                Telerau ac amodau
+                                {{/isWelsh}}
+
+                                {{^isWelsh}}
+                                Terms and conditions
+                                {{/isWelsh}}
+
+                            </a>
+                        </li>
                     {{/termsAndConditionFooterLink}}
-                    <li><a href='https://www.gov.uk/help' target="_blank" data-sso="false" data-journey-click="footer:Click:Help">Help using GOV.UK</a></li>
+                    <li>
+                        <a href="https://www.gov.uk/help" target="_blank" data-sso="false" data-journey-click="footer:Click:Help">
+
+                            {{#isWelsh}}
+                            Help wrth ddefnyddio GOV.UK
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Help using GOV.UK
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
 
                     {{#additionalFooterLinks}}
                     {{#url}}
@@ -337,12 +386,32 @@
                         {{/assetsPath}}
                     </a>
                     </h2>
-                    <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated</p>
+                    <p>
+
+                        {{#isWelsh}}
+                            Mae&#39;r holl gynnwys ar gael dan y <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Drwydded Llywodraeth Agored, fersiwn 3.0</a>, oni nodir yn wahanol
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated
+                        {{/isWelsh}}
+
+                    </p>
                 </div>
             </div>
 
             <div class="copyright">
-                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
+
+                    {{#isWelsh}}
+                    &copy; Hawlfraint y Goron
+                    {{/isWelsh}}
+
+                    {{^isWelsh}}
+                    &copy; Crown Copyright
+                    {{/isWelsh}}
+
+                </a>
             </div>
         </div>
     </div>
