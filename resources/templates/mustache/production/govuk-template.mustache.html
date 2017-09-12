@@ -204,20 +204,20 @@
                     <span>
                         {{#isWelsh}}
                             Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
-                        {{#feedbackIdentifier}}
-                            {{^authenticatedUser}}
-                                &nbsp;– bydd eich
-                                <a id="feedback-link" href="http://localhost:9250/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                    adborth</a>
-                                yn ein helpu i'w wella.
-                            {{/authenticatedUser}}
-                            {{#authenticatedUser}}
-                                &nbsp;– bydd eich
-                                <a id="feedback-link" href="http://localhost:9250/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                    adborth</a>
-                                yn ein helpu i'w wella.
-                            {{/authenticatedUser}}
-                        {{/feedbackIdentifier}}
+                            {{#feedbackIdentifier}}
+                                {{^authenticatedUser}}
+                                    &nbsp;– bydd eich
+                                    <a id="feedback-link" href="http://localhost:9250/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                        adborth</a>
+                                    yn ein helpu i'w wella.
+                                {{/authenticatedUser}}
+                                {{#authenticatedUser}}
+                                    &nbsp;– bydd eich
+                                    <a id="feedback-link" href="http://localhost:9250/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                        adborth</a>
+                                    yn ein helpu i'w wella.
+                                {{/authenticatedUser}}
+                            {{/feedbackIdentifier}}
                         {{/isWelsh}}
                         {{^isWelsh}}
                             This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
