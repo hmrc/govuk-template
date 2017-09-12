@@ -32,7 +32,6 @@
             border-bottom: 1px solid #dee0e2;
         }
         .service-info div.last-login {
-            float: right;
             color: #6f777b;
         }
 
@@ -41,7 +40,7 @@
     <style media="screen and (min-width: 641px)" type="text/css">
 
         .service-info div.last-login {
-            margin-top: 0.9em;
+            margin-top: 1.1em;
         }
 
     </style>
@@ -202,14 +201,28 @@
             <div class="beta-banner">
                 <p>
                     <strong class="phase-tag">BETA</strong>
-                    <span>This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
-                        {{#feedbackIdentifier}}
-                           - your <a id="feedback-link"
-                           href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
-                           data-sso="false"
-                           data-journey-click="other-global:Click:Feedback">feedback</a> will help us to improve it.
-                        {{/feedbackIdentifier}}
+
+                    <span>
+                        {{#isWelsh}}
+                            Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                            {{#feedbackIdentifier}}
+                               - your <a id="feedback-link"
+                                         href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
+                                         data-sso="false"
+                                         data-journey-click="other-global:Click:Feedback">adborth</a> yn ein helpu i'w wella.
+                            {{/feedbackIdentifier}}
+                        {{/isWelsh}}
+                        {{^isWelsh}}
+                            This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                            {{#feedbackIdentifier}}
+                               - your <a id="feedback-link"
+                                         href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}"
+                                         data-sso="false"
+                                         data-journey-click="other-global:Click:Feedback">feedback</a> will help us to improve it.
+                            {{/feedbackIdentifier}}
+                        {{/isWelsh}}
                     </span>
+
                 </p>
             </div>
             {{/betaBanner}}
@@ -223,17 +236,46 @@
                 <p class="last-login__more-details text--right font-xsmall">
 
                     {{^previouslyLoggedInAt}}
-                    This is the first time you have logged in
+
+                        {{#isWelsh}}
+                            Dyma&#39;r tro cyntaf i chi fewngofnodi
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            This is the first time you have logged in
+                        {{/isWelsh}}
+
                     {{/previouslyLoggedInAt}}
+
                     {{#previouslyLoggedInAt}}
-                    You last signed in {{{previouslyLoggedInAt}}}
+
+                        {{#isWelsh}}
+                            Y tro diwethaf i chi fewngofnodi oedd {{{previouslyLoggedInAt}}}
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            You last signed in {{{previouslyLoggedInAt}}}
+                        {{/isWelsh}}
+
                     {{/previouslyLoggedInAt}}
 
                     {{#logoutUrl}}
-                    <br><a id="logOutStatusHref" href="{{logoutUrl}}">Sign out</a>
+                    <br>
+                    <a id="logOutStatusHref" href="{{logoutUrl}}">
+
+                        {{#isWelsh}}
+                            Allgofnodi
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            Sign out
+                        {{/isWelsh}}
+
+                    </a>
                     {{/logoutUrl}}
                 </p>
             </div>
+
             {{/showLastLogInStatus}}
         </div>
 
@@ -260,20 +302,69 @@
         <div class="footer-meta">
             <div class="footer-meta-inner">
                 <ul class="platform-help-links">
-                    <li><a href='/help/cookies' target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">Cookies</a></li>
-                    <li><a href='/help/privacy' target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">Privacy policy</a></li>
+                    <li>
+                        <a href="/help/cookies" target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">
+
+                            {{#isWelsh}}
+                            Cwcis
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Cookies
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/help/privacy" target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">
+
+                            {{#isWelsh}}
+                            Polisi preifatrwydd
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Privacy policy
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
 
                     {{#termsAndConditionFooterLink}}
-                    {{#url}}
-                    {{#text}}
-                    <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
-                    {{/text}}
-                    {{/url}}
+                        {{#url}}
+                            {{#text}}
+                                <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
+                            {{/text}}
+                        {{/url}}
                     {{/termsAndConditionFooterLink}}
+
                     {{^termsAndConditionFooterLink}}
-                    <li><a href='/help/terms-and-conditions' target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">Terms and conditions</a></li>
+                        <li>
+                            <a href="/help/terms-and-conditions" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">
+
+                                {{#isWelsh}}
+                                Telerau ac amodau
+                                {{/isWelsh}}
+
+                                {{^isWelsh}}
+                                Terms and conditions
+                                {{/isWelsh}}
+
+                            </a>
+                        </li>
                     {{/termsAndConditionFooterLink}}
-                    <li><a href='https://www.gov.uk/help' target="_blank" data-sso="false" data-journey-click="footer:Click:Help">Help using GOV.UK</a></li>
+                    <li>
+                        <a href="https://www.gov.uk/help" target="_blank" data-sso="false" data-journey-click="footer:Click:Help">
+
+                            {{#isWelsh}}
+                            Help wrth ddefnyddio GOV.UK
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                            Help using GOV.UK
+                            {{/isWelsh}}
+
+                        </a>
+                    </li>
 
                     {{#additionalFooterLinks}}
                     {{#url}}
@@ -294,12 +385,32 @@
                         {{/assetsPath}}
                     </a>
                     </h2>
-                    <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated</p>
+                    <p>
+
+                        {{#isWelsh}}
+                            Mae&#39;r holl gynnwys ar gael dan y <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Drwydded Llywodraeth Agored, fersiwn 3.0</a>, oni nodir yn wahanol
+                        {{/isWelsh}}
+
+                        {{^isWelsh}}
+                            All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank">Open Government Licence v3.0</a>, except where otherwise stated
+                        {{/isWelsh}}
+
+                    </p>
                 </div>
             </div>
 
             <div class="copyright">
-                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
+
+                    {{#isWelsh}}
+                    &copy; Hawlfraint y Goron
+                    {{/isWelsh}}
+
+                    {{^isWelsh}}
+                    &copy; Crown Copyright
+                    {{/isWelsh}}
+
+                </a>
             </div>
         </div>
     </div>
