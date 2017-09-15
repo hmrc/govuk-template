@@ -137,7 +137,13 @@
 
 <div id="skiplink-container">
     <div>
-        <a href="#content" class="skiplink">Skip to main content</a>
+        {{#skiplinkId}}
+            <a href="#{{skiplinkId}}" class="skiplink">Skip to main content</a>
+        {{/skiplinkId}}
+
+        {{^skiplinkId}}
+            <a href="#content" class="skiplink">Skip to main content</a>
+        {{/skiplinkId}}
     </div>
 </div>
 
