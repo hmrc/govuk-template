@@ -137,41 +137,12 @@
         <div class="header-proposition">
             <div class="content">
 
-                {{#hasNavLinks}}
-                    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-                {{/hasNavLinks}}
-
                 <nav id="proposition-menu" class="header__menu" role="navigation">
 
-                    {{#navTitleLink}}
-                        <a href="{{navTitleLink}}" class="header__menu__proposition-name">{{navTitle}}</a>
-                    {{/navTitleLink}}
+                    {{#navTitle}}
+                        <span class="header__menu__proposition-name">{{navTitle}}</span>
+                    {{/navTitle}}
 
-                    {{^navTitleLink}}
-                        {{#navTitle}}
-                            <span class="header__menu__proposition-name">{{navTitle}}</span>
-                        {{/navTitle}}
-                    {{/navTitleLink}}
-
-                    {{#hasNavLinks}}
-                        <ul id="proposition-links" class="header__menu__proposition-links">
-                            {{#navLinks}}
-                                {{#url}}
-                                    {{#text}}
-
-                                        {{#desktopHidden}}
-                                            <li class="desktop-hidden"><a href="{{{url}}}">{{text}}</a></li>
-                                        {{/desktopHidden}}
-
-                                        {{^desktopHidden}}
-                                            <li><a href="{{{url}}}">{{text}}</a></li>
-                                        {{/desktopHidden}}
-
-                                    {{/text}}
-                                {{/url}}
-                            {{/navLinks}}
-                        </ul>
-                    {{/hasNavLinks}}
                 </nav>
             </div>
         </div>
