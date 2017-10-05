@@ -137,41 +137,12 @@
         <div class="header-proposition">
             <div class="content">
 
-                {{#hasNavLinks}}
-                    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-                {{/hasNavLinks}}
-
                 <nav id="proposition-menu" class="header__menu" role="navigation">
 
-                    {{#navTitleLink}}
-                        <a href="{{navTitleLink}}" class="header__menu__proposition-name">{{navTitle}}</a>
-                    {{/navTitleLink}}
+                    {{#navTitle}}
+                        <span class="header__menu__proposition-name">{{navTitle}}</span>
+                    {{/navTitle}}
 
-                    {{^navTitleLink}}
-                        {{#navTitle}}
-                            <span class="header__menu__proposition-name">{{navTitle}}</span>
-                        {{/navTitle}}
-                    {{/navTitleLink}}
-
-                    {{#hasNavLinks}}
-                        <ul id="proposition-links" class="header__menu__proposition-links">
-                            {{#navLinks}}
-                                {{#url}}
-                                    {{#text}}
-
-                                        {{#desktopHidden}}
-                                            <li class="desktop-hidden"><a href="{{{url}}}">{{text}}</a></li>
-                                        {{/desktopHidden}}
-
-                                        {{^desktopHidden}}
-                                            <li><a href="{{{url}}}">{{text}}</a></li>
-                                        {{/desktopHidden}}
-
-                                    {{/text}}
-                                {{/url}}
-                            {{/navLinks}}
-                        </ul>
-                    {{/hasNavLinks}}
                 </nav>
             </div>
         </div>
@@ -191,7 +162,7 @@
             <div class="service-info">
 
                 <nav id="secondary-nav" class="account-menu" role="navigation">
-                    <a href="/personal-account" class="account-menu__link account-menu__link--home">
+                    <a href="/personal-account" class="account-menu__link account-menu__link--home" data-journey-click="link - click:utility-nav:Account home">
                         <span class="account-icon account-icon--home">
 
                             {{#isWelsh}}
@@ -204,7 +175,7 @@
 
                         </span>
                     </a>
-                    <a href="#" class="account-menu__link account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false">
+                    <a href="#" class="account-menu__link account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false" data-journey-click="link - click:utility-nav:Account menu">
 
                         {{#isWelsh}}
                             Dewislen y cyfrif
@@ -218,7 +189,7 @@
 
                     <ul class="account-menu__main">
                         <li class="account-menu__link--back hidden" aria-hidden="true">
-                            <a href="#" class="account-menu__link">
+                            <a href="#" class="account-menu__link" data-journey-click="link - click:utility-nav:Back">
 
                                 {{#isWelsh}}
                                     Yn ôl
@@ -233,7 +204,7 @@
 
                         {{#isGovernmentGateway}}
                             <li>
-                                <a href="/personal-account/messages" class="account-menu__link">
+                                <a href="/personal-account/messages" class="account-menu__link" data-journey-click="link - click:utility-nav:Messages">
 
                                     {{#isWelsh}}
                                         Negeseuon
@@ -262,7 +233,7 @@
                         </li>
 
                         <li>
-                            <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account">
+                            <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
 
                                 {{#isWelsh}}
                                     Eich cyfrif
@@ -292,7 +263,7 @@
 
                                             </p>
                                             <div>
-                                                <a href="/business-account">
+                                                <a href="/business-account"  data-journey-click="link - click:utility-nav:View your business tax account">
 
                                                     {{#isWelsh}}
                                                         Bwrw golwg ar eich cyfrif treth busnes
@@ -324,7 +295,7 @@
 
                                         </p>
                                         <div>
-                                            <a href="/trusted-helpers/select-a-service">
+                                            <a href="/trusted-helpers/select-a-service"  data-journey-click="link - click:utility-nav:Manage your trusted helpers">
 
                                                 {{#isWelsh}}
                                                     Rheoli&#39;ch cynorthwywyr y gellir ymddiried ynddynt
@@ -356,7 +327,7 @@
 
                                     </p>
                                     <div>
-                                        <a href="/personal-account/preferences">
+                                        <a href="/personal-account/preferences" data-journey-click="link - click:utility-nav:Manage your paperless settings">
 
                                             {{#isWelsh}}
                                                 Rheoli&#39;ch gosodiadau di-bapur
@@ -384,7 +355,7 @@
 
                                     </p>
                                     <div>
-                                        <a href="/personal-account/personal-details">
+                                        <a href="/personal-account/personal-details" data-journey-click="link - click:utility-nav:Manage your personal details">
 
                                             {{#isWelsh}}
                                                 Rheoli&#39;ch manylion personol
@@ -402,7 +373,7 @@
 
                         {{#signOutUrl}}
                             <li>
-                                <a href="{{{signOutUrl}}}" class="account-menu__link">
+                                <a href="{{{signOutUrl}}}" class="account-menu__link"  data-journey-click="link - click:utility-nav:Sign out">
 
                                     {{#isWelsh}}
                                         Allgofnodi
@@ -640,7 +611,7 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', '{{trackingId}}', '{{#cookieDomain}}{{cookieDomain}}{{/cookieDomain}}{{^cookieDomain}}auto{{/cookieDomain}}');
-            ga('set', 'anonymizeIp', true)
+            ga('set', 'anonymizeIp', true);
 
             {{#fullPagePath}}                               ga('set', 'dimension1', '{{{fullPagePath}}}');                                {{/fullPagePath}}
             {{#taxType}}                                    ga('set', 'dimension2', '{{{taxType}}}');                                     {{/taxType}}
