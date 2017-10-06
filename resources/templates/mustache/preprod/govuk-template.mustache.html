@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<!--[if lt IE 9]><html class="no-js lte-ie8" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<!DOCTYPE html lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}">
+<!--[if lt IE 9]><html class="no-js lte-ie8" lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}" class="no-js"><!--<![endif]-->
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -219,7 +219,7 @@
                         {{/isGovernmentGateway}}
 
                         <li>
-                            <a href="/track" class="account-menu__link">
+                            <a href="/track" class="account-menu__link" data-journey-click="link - click:utility-nav:Check progress">
 
                                 {{#isWelsh}}
                                     Gwirio cynnydd
@@ -263,7 +263,7 @@
 
                                             </p>
                                             <div>
-                                                <a href="/business-account"  data-journey-click="link - click:utility-nav:View your business tax account">
+                                                <a href="/business-account" data-journey-click="link - click:utility-nav:View your business tax account">
 
                                                     {{#isWelsh}}
                                                         Bwrw golwg ar eich cyfrif treth busnes
@@ -295,7 +295,7 @@
 
                                         </p>
                                         <div>
-                                            <a href="/trusted-helpers/select-a-service"  data-journey-click="link - click:utility-nav:Manage your trusted helpers">
+                                            <a href="/trusted-helpers/select-a-service" data-journey-click="link - click:utility-nav:Manage your trusted helpers">
 
                                                 {{#isWelsh}}
                                                     Rheoli&#39;ch cynorthwywyr y gellir ymddiried ynddynt
@@ -373,7 +373,7 @@
 
                         {{#signOutUrl}}
                             <li>
-                                <a href="{{{signOutUrl}}}" class="account-menu__link"  data-journey-click="link - click:utility-nav:Sign out">
+                                <a href="{{{signOutUrl}}}" class="account-menu__link" data-journey-click="link - click:utility-nav:Sign out">
 
                                     {{#isWelsh}}
                                         Allgofnodi
