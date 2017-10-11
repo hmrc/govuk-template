@@ -162,7 +162,7 @@
             <div class="service-info">
 
                 <nav id="secondary-nav" class="account-menu" role="navigation">
-                    <a href="/personal-account" class="account-menu__link account-menu__link--home" data-journey-click="link - click:utility-nav:Account home">
+                    <a href="/personal-account" class="account-menu__link account-menu__link--home{{#activeTabHome}} account-menu__link--active{{/activeTabHome}}" data-journey-click="link - click:utility-nav:Account home">
                         <span class="account-icon account-icon--home">
 
                             {{#isWelsh}}
@@ -204,7 +204,7 @@
 
                         {{#isGovernmentGateway}}
                             <li>
-                                <a href="/personal-account/messages" class="account-menu__link" data-journey-click="link - click:utility-nav:Messages">
+                                <a href="/personal-account/messages" class="account-menu__link{{#activeTabMessages}} account-menu__link--active{{/activeTabMessages}}" data-journey-click="link - click:utility-nav:Messages">
 
                                     {{#isWelsh}}
                                         Negeseuon
@@ -219,7 +219,7 @@
                         {{/isGovernmentGateway}}
 
                         <li>
-                            <a href="/track" class="account-menu__link" data-journey-click="link - click:utility-nav:Check progress">
+                            <a href="/track" class="account-menu__link{{#activeTabCheckProgress}} account-menu__link--active{{/activeTabCheckProgress}}" data-journey-click="link - click:utility-nav:Check progress">
 
                                 {{#isWelsh}}
                                     Gwirio cynnydd
@@ -233,7 +233,7 @@
                         </li>
 
                         <li>
-                            <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
+                            <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more{{#activeTabYourAccount}} account-menu__link--active{{/activeTabYourAccount}}" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
 
                                 {{#isWelsh}}
                                     Eich cyfrif
