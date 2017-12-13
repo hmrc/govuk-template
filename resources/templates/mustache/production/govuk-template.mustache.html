@@ -105,6 +105,17 @@
         <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js" type="text/javascript"></script>
     {{/optimizelyProjectId}}
 
+    {{#optimizely}}
+        {{#audience}}
+            <script type="text/javascript">
+                var audience = "{{audience}}"
+            </script>
+        {{/audience}}
+        {{#projectId}}
+            <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{projectId}}}.js" type="text/javascript"></script>
+        {{/projectId}}
+    {{/optimizely}}
+
     {{#assetsPath}}
         <script src="{{assetsPath}}javascripts/vendor/modernizr.js" type="text/javascript"></script>
     {{/assetsPath}}
