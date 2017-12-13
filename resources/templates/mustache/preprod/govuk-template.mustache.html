@@ -106,14 +106,14 @@
     {{/optimizelyProjectId}}
 
     {{#optimizely}}
-        {{#optimizelyAudience}}
+        {{#audience}}
             <script type="text/javascript">
-                var optimizelyAudience = "{{optimizelyAudience}}"
+                var audience = "{{audience}}"
             </script>
-        {{/optimizelyAudience}}
-        {{#optimizelyProjectId}}
-            <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js" type="text/javascript"></script>
-        {{/optimizelyProjectId}}
+        {{/audience}}
+        {{#projectId}}
+            <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{projectId}}}.js" type="text/javascript"></script>
+        {{/projectId}}
     {{/optimizely}}
 
     {{#assetsPath}}
