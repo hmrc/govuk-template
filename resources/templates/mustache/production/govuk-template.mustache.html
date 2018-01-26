@@ -316,6 +316,10 @@
                                         Messages
                                     {{/isWelsh}}
 
+                                    {{#unreadMessageCount}}
+                                        <span class="badge" aria-label="Number of unread messages">{{unreadMessageCount}}</span>
+                                    {{/unreadMessageCount}}
+
                                 </a>
                             </li>
                         {{/isGovernmentGateway}}
