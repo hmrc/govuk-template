@@ -222,7 +222,7 @@
 
 {{#fullWidthBannerTitle}}
     <div id="full-width-banner" class="full-width-banner">
-        <section class="centered-content visible full-width-banner__container" aria-hidden="false">
+        <div class="centered-content visible full-width-banner__container" aria-hidden="false">
             <div class="full-width-banner__title">
                 {{fullWidthBannerTitle}}
             </div>
@@ -243,7 +243,7 @@
                     </span>
                 </a>
             {{/fullWidthBannerDismissText}}
-        </section>
+        </div>
     </div>
 {{/fullWidthBannerTitle}}
 
@@ -506,13 +506,21 @@
                         <div aria-hidden="true">
                             <a href="{{backlinkUrl}}" class="link-back">
 
-                                {{#isWelsh}}
-                                    Yn &#244;l
-                                {{/isWelsh}}
+                                {{#backlinkUrlText}}
+                                    {{backlinkUrlText}}
+                                {{/backlinkUrlText}}
 
-                                {{^isWelsh}}
-                                    Back
-                                {{/isWelsh}}
+                                {{^backlinkUrlText}}
+
+                                    {{#isWelsh}}
+                                        Yn &#244;l
+                                    {{/isWelsh}}
+
+                                    {{^isWelsh}}
+                                        Back
+                                    {{/isWelsh}}
+
+                                {{/backlinkUrlText}}
 
                             </a>
                         </div>
@@ -576,13 +584,13 @@
                                     Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
                                     {{#feedbackIdentifier}}
                                         {{^authenticatedUser}}
-                                            &nbsp;– bydd eich
+                                            &nbsp;- bydd eich
                                             <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 adborth</a>
                                             yn ein helpu i&#39;w wella.
                                         {{/authenticatedUser}}
                                         {{#authenticatedUser}}
-                                            &nbsp;– bydd eich
+                                            &nbsp;- bydd eich
                                             <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 adborth</a>
                                             yn ein helpu i&#39;w wella.
@@ -837,6 +845,16 @@
         <script src="{{url}}" type="text/javascript"></script>
     {{/url}}
 {{/scriptElems}}
+
+{{#sessionTimeout}}
+    {{#keepAliveUrl}}
+        {{#logoutUrl}}
+            <script type="text/javascript">
+                $.timeoutDialog({timeout: 900, countdown: 60, keep_alive_url: '{{{keepAliveUrl}}}', logout_url: '{{{logoutUrl}}}'});
+            </script>
+        {{/logoutUrl}}
+    {{/keepAliveUrl}}
+{{/sessionTimeout}}
 
 {{#inlineScript}}
     {{{inlineScript}}}
