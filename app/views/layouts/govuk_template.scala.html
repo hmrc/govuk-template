@@ -1,10 +1,12 @@
 @(title: Option[String], 
   bodyClasses: Option[String])(
- head: Html, 
-  bodyEnd: Html, 
-  insideHeader: Html, 
-  afterHeader: Html, 
-  footerTop: Html, 
+  gtmScript: Option[Html],
+  gtmNoScript: Option[Html],
+  head: Html,
+  bodyEnd: Html,
+  insideHeader: Html,
+  afterHeader: Html,
+  footerTop: Html,
   footerLinks: Option[Html],
   nav: Boolean = false)(
  content: Html)
@@ -13,6 +15,7 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
   <head>
+    @gtmScript.getOrElse("")
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
     <title>@title.getOrElse("GOV.UK - The best place to find government services and information")</title>
@@ -67,6 +70,7 @@
   </head>
 
   <body class="@bodyClasses.getOrElse("")">
+    @gtmNoScript.getOrElse("")
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <div id="skiplink-container">
