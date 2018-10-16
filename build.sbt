@@ -3,10 +3,11 @@ import play.core.PlayVersion
 val libName = "govuk-template"
 
 lazy val root = Project(libName, file("."))
-  .enablePlugins(PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
+  .enablePlugins(PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtArtifactory)
   .disablePlugins(JUnitXmlReportPlugin)
   .settings(
     name := libName,
+    majorVersion := 5,
     scalaVersion := "2.11.7",
     libraryDependencies ++= libDependencies,
     resolvers := Seq(
@@ -14,7 +15,8 @@ lazy val root = Project(libName, file("."))
       Resolver.typesafeRepo("releases")
     ),
     routesGenerator := StaticRoutesGenerator,
-    unmanagedResourceDirectories in Compile += baseDirectory.value / "resources"
+    unmanagedResourceDirectories in Compile += baseDirectory.value / "resources",
+    excludes += "**.mustache.html"
   )
 
 lazy val libDependencies = Seq(
