@@ -14,12 +14,17 @@
  * limitations under the License.
  */
 
-package controllers.template
+package uk.gov.hmrc.template
 
 import javax.inject.{Inject, Singleton}
+import play.api.Configuration
 
-import controllers.AssetsBuilder
-import play.api.http.HttpErrorHandler
+trait TemplateAssetsFinder {
+  def path(pathTo: String): String
+}
 
 @Singleton
-class Template @Inject()(errorHandler: HttpErrorHandler) extends AssetsBuilder(errorHandler)
+class TemplateAssetsFinderImpl @Inject()(config: Configuration) extends TemplateAssetsFinder {
+
+  def path(pathTo: String): String = s"/template/assets/$pathTo"
+}
