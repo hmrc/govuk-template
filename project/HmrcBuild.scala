@@ -15,6 +15,7 @@
  */
 
 import play.routes.compiler.StaticRoutesGenerator
+import play.sbt.PlayLayoutPlugin
 import sbt.Keys._
 import sbt.{Build, _}
 import uk.gov.hmrc.SbtAutoBuildPlugin
@@ -23,7 +24,6 @@ import uk.gov.hmrc.versioning.SbtGitVersioning
 object HmrcBuild extends Build {
 
   import Dependencies._
-  import uk.gov.hmrc.DefaultBuildSettings._
   import play.sbt.routes.RoutesKeys.routesGenerator
 
   val appName = "govuk-template"
@@ -34,6 +34,7 @@ object HmrcBuild extends Build {
 
   lazy val library = Project(appName, file("."))
     .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
+    .disablePlugins(PlayLayoutPlugin)
     .settings(
       name := appName,
       scalaVersion := "2.11.7",
