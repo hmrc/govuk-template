@@ -20,6 +20,9 @@ import sbt.Keys._
 import sbt.{Build, _}
 import uk.gov.hmrc.SbtAutoBuildPlugin
 import uk.gov.hmrc.versioning.SbtGitVersioning
+import uk.gov.hmrc.SbtArtifactory
+import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
+import uk.gov.hmrc.SbtArtifactory.autoImport.makePublicallyAvailableOnBintray
 
 object HmrcBuild extends Build {
 
@@ -33,9 +36,11 @@ object HmrcBuild extends Build {
   )
 
   lazy val library = Project(appName, file("."))
-    .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning)
+    .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtArtifactory)
     .disablePlugins(PlayLayoutPlugin)
     .settings(
+      majorVersion := 5,
+      makePublicallyAvailableOnBintray := true,
       name := appName,
       scalaVersion := "2.11.7",
       libraryDependencies ++= appDependencies,
