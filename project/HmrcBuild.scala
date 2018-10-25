@@ -14,17 +14,15 @@
  * limitations under the License.
  */
 
-import play.core.PlayVersion
 import play.sbt.PlayLayoutPlugin
 import play.sbt.routes.RoutesKeys.{InjectedRoutesGenerator, StaticRoutesGenerator, routesGenerator}
 import sbt.Keys._
 import sbt.{Build, _}
-import uk.gov.hmrc.SbtAutoBuildPlugin
+import uk.gov.hmrc.SbtArtifactory.autoImport.makePublicallyAvailableOnBintray
+import uk.gov.hmrc.{SbtArtifactory, SbtAutoBuildPlugin}
 import uk.gov.hmrc.playcrosscompilation.PlayVersion.Play25
 import uk.gov.hmrc.versioning.SbtGitVersioning
-import uk.gov.hmrc.SbtArtifactory
 import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
-import uk.gov.hmrc.SbtArtifactory.autoImport.makePublicallyAvailableOnBintray
 
 object HmrcBuild extends Build {
 
@@ -40,7 +38,8 @@ object HmrcBuild extends Build {
       makePublicallyAvailableOnBintray := true,
       name := appName,
       scalaVersion := "2.11.7",
-      libraryDependencies ++= LibDependencies.compile,
+      libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
+      dependencyOverrides ++= LibDependencies.overrides,
       resolvers := Seq(
         Resolver.bintrayRepo("hmrc", "releases"),
         Resolver.typesafeRepo("releases")
@@ -67,6 +66,7 @@ object HmrcBuild extends Build {
     )
     .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
     .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
+
 }
 
 object LibDependencies {
@@ -81,4 +81,18 @@ object LibDependencies {
       )
     )
 
+  val test: Seq[ModuleID] = Seq(
+    "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+    "org.pegdown"   %  "pegdown"   % "1.6.0" % Test
+  )
+
+  // downgrade twirl for play 2.5 compatibility
+  val overrides: Set[ModuleID] =
+    PlayCrossCompilation.dependencies(
+      play25 = Seq(
+        "com.typesafe.play" %% "twirl-api" % "1.1.1"
+      )
+    ).toSet
+
 }
+

@@ -12,7 +12,7 @@ addSbtPlugin("uk.gov.hmrc" % "sbt-artifactory" % "0.13.0")
 
 val playPlugin =
   if (sys.env.get("PLAY_VERSION").exists(_ == "2.6"))
-    "com.typesafe.play" % "sbt-plugin" % "2.6.15"
+    "com.typesafe.play" % "sbt-plugin" % "2.6.20"
   else
     "com.typesafe.play" % "sbt-plugin" % "2.5.12"
 
