@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 HM Revenue & Customs
+ * Copyright 2018 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-import play.routes.compiler.StaticRoutesGenerator
+import play.core.PlayVersion
 import play.sbt.PlayLayoutPlugin
+import play.sbt.routes.RoutesKeys.{InjectedRoutesGenerator, StaticRoutesGenerator, routesGenerator}
 import sbt.Keys._
 import sbt.{Build, _}
 import uk.gov.hmrc.SbtAutoBuildPlugin
+import uk.gov.hmrc.playcrosscompilation.PlayVersion.Play25
 import uk.gov.hmrc.versioning.SbtGitVersioning
 import uk.gov.hmrc.SbtArtifactory
 import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
@@ -26,14 +28,9 @@ import uk.gov.hmrc.SbtArtifactory.autoImport.makePublicallyAvailableOnBintray
 
 object HmrcBuild extends Build {
 
-  import Dependencies._
-  import play.sbt.routes.RoutesKeys.routesGenerator
-
   val appName = "govuk-template"
 
-  val appDependencies = Seq(
-    Compile.play
-  )
+  import play.twirl.sbt.Import.TwirlKeys._
 
   lazy val library = Project(appName, file("."))
     .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtArtifactory)
@@ -43,21 +40,45 @@ object HmrcBuild extends Build {
       makePublicallyAvailableOnBintray := true,
       name := appName,
       scalaVersion := "2.11.7",
-      libraryDependencies ++= appDependencies,
+      libraryDependencies ++= LibDependencies.compile,
       resolvers := Seq(
         Resolver.bintrayRepo("hmrc", "releases"),
         Resolver.typesafeRepo("releases")
       ),
       crossScalaVersions := Seq("2.11.7"),
-      routesGenerator := StaticRoutesGenerator
+      routesGenerator    := {
+        if (PlayCrossCompilation.playVersion == Play25) {
+          StaticRoutesGenerator
+        } else {
+          InjectedRoutesGenerator
+        }
+      },
+      (sourceDirectories in (Compile, compileTemplates)) += {
+        val twirlDir =
+          if (PlayCrossCompilation.playVersion == Play25) {
+            "src/main/play-25/twirl"
+          } else {
+            "src/main/play-26/twirl"
+          }
+        baseDirectory.value / twirlDir
+      },
+      de.heikoseeberger.sbtheader.HeaderKey.excludes += "**.mustache.html", // don't add licence headers to mustache templates
+      PlayCrossCompilation.playCrossCompilationSettings
     )
     .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
     .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
 }
 
-object Dependencies {
-  import _root_.play.core.PlayVersion
-  object Compile {
-    val play = "com.typesafe.play" %% "play" % PlayVersion.current % "provided"
-  }
+object LibDependencies {
+
+  val compile: Seq[ModuleID] =
+    PlayCrossCompilation.dependencies(
+      play25 = Seq(
+        "com.typesafe.play" %% "play" % "2.5.12" % "provided"
+      ),
+      play26 = Seq(
+        "com.typesafe.play" %% "play" % "2.6.20" % "provided"
+      )
+    )
+
 }
