@@ -1,12 +1,11 @@
-import sbt.ModuleID
-import sbt._
+import sbt.{ModuleID, _}
 
 object LibDependencies {
 
   val compile: Seq[ModuleID] =
     PlayCrossCompilation.dependencies(
       play25 = Seq(
-        "com.typesafe.play" %% "play" % "2.5.12" % "provided"
+        "com.typesafe.play" %% "play" % "2.5.19" % "provided"
       ),
       play26 = Seq(
         "com.typesafe.play" %% "play" % "2.6.20" % "provided"
