@@ -9,14 +9,14 @@ lazy val library = Project(appName, file("."))
     majorVersion := 5,
     makePublicallyAvailableOnBintray := true,
     name := appName,
-    scalaVersion := "2.11.7",
+    scalaVersion := "2.11.12",
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
     dependencyOverrides ++= LibDependencies.overrides,
     resolvers := Seq(
       Resolver.bintrayRepo("hmrc", "releases"),
       Resolver.typesafeRepo("releases")
     ),
-    crossScalaVersions := Seq("2.11.7"),
+    crossScalaVersions := Seq("2.11.12"),
     routesGenerator    := {
       if (PlayCrossCompilation.playVersion == Play25) {
         StaticRoutesGenerator
