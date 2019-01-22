@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}" class="no-js"><!--<![endif]-->
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    {{{ metaTags }}}
 
     <title>
         {{#pageTitle}}
@@ -27,7 +28,7 @@
 
 
     <!--[if IE 8]>
-        <script type="text/javascript">
+    <script type="text/javascript">
             (function(){if(window.opera){return;}
                 setTimeout(function(){var a=document,g,b={families:(g=
                                 ["nta"]),urls:["/template/assets/stylesheets/fonts-ie8.css"]},
@@ -71,7 +72,7 @@
         {{/assetsPath}}
     <![endif]-->
     <!--[if IE 8 ]>
-        {{#assetsPath}}
+    {{#assetsPath}}
             <link rel="stylesheet" href="{{assetsPath}}stylesheets/application-ie.min.css" />
         {{/assetsPath}}
         {{^assetsPath}}
@@ -79,7 +80,7 @@
         {{/assetsPath}}
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        {{#assetsPath}}
+    {{#assetsPath}}
             <link rel="stylesheet" href="{{assetsPath}}stylesheets/application.min.css" />
         {{/assetsPath}}
         {{^assetsPath}}
@@ -217,7 +218,13 @@
 <!--end header-->
 
 <div id="global-cookie-message">
-    <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+    {{#isWelsh}}
+        <p>Mae GOV.UK yn defnyddio cwcis i wneud y safle&rsquo;n haws i&rsquo;w ddefnyddio. <a href="/help/cookies">Rhagor o wybodaeth am gwcis</a></p>
+    {{/isWelsh}}
+
+    {{^isWelsh}}
+        <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+    {{/isWelsh}}
 </div>
 
 {{#fullWidthBannerTitle}}
@@ -419,9 +426,9 @@
 
 
                                 <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
+                                        {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
+                                        {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
+                                        {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
                                     <p class="subnav__section__heading">
 
                                         {{#isWelsh}}
@@ -448,9 +455,9 @@
                                     </div>
                                 </div>
                                 <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
+                                        {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
+                                        {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
+                                        {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
                                     <p class="subnav__section__heading">
 
                                         {{#isWelsh}}
@@ -584,13 +591,13 @@
                                     Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
                                     {{#feedbackIdentifier}}
                                         {{^authenticatedUser}}
-                                            – bydd eich
+                                            &nbsp;- bydd eich
                                             <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 adborth</a>
                                             yn ein helpu i&#39;w wella.
                                         {{/authenticatedUser}}
                                         {{#authenticatedUser}}
-                                            – bydd eich
+                                            &nbsp;- bydd eich
                                             <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 adborth</a>
                                             yn ein helpu i&#39;w wella.
@@ -602,13 +609,13 @@
                                     This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
                                     {{#feedbackIdentifier}}
                                         {{^authenticatedUser}}
-                                            – your
+                                            &nbsp;- your
                                             <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 feedback</a>
                                             will help us to improve it.
                                         {{/authenticatedUser}}
                                         {{#authenticatedUser}}
-                                            – your
+                                            &nbsp;- your
                                             <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
                                                 feedback</a>
                                             will help us to improve it.
@@ -631,7 +638,14 @@
     <div class="footer-wrapper">
 
         {{#showEuExitFooterLink}}
-            <h2 class="heading-medium">Prepare for EU Exit</h2>
+            <h2 class="heading-medium">
+                {{#isWelsh}}
+                    Paratoi ar gyfer Ymadael &acirc;&rsquo;r UE (Saesneg yn unig)
+                {{/isWelsh}}
+                {{^isWelsh}}
+                    Prepare for EU Exit
+                {{/isWelsh}}
+            </h2>
             <hr>
             <div class="grid-row">
                 <ul class="push--bottom">
@@ -641,7 +655,13 @@
                                   target="_blank"
                                   data-sso="false"
                                   data-journey-click="footer:Click:Prepare your business for the UK leaving the EU">
-                                Prepare your business for the UK leaving the EU
+                                    {{#isWelsh}}
+                                        Paratoi eich busnes ar gyfer y DU yn gadael yr UE (Saesneg yn unig)
+                                    {{/isWelsh}}
+                                    {{^isWelsh}}
+                                        Prepare your business for the UK leaving the EU
+                                    {{/isWelsh}}
+
                             </a></p>
                         </li>
 
@@ -650,7 +670,13 @@
                                   target="_blank"
                                   data-sso="false"
                                   data-journey-click="footer:Click:Prepare for EU Exit if you live in the UK">
-                                Prepare for EU Exit if you live in the UK
+                                    {{#isWelsh}}
+                                        Paratoi ar gyfer Ymadael &acirc;&rsquo;r UE os ydych yn byw yn y DU (Saesneg yn unig)
+                                    {{/isWelsh}}
+                                    {{^isWelsh}}
+                                        Prepare for EU Exit if you live in the UK
+                                    {{/isWelsh}}
+
                             </a></p>
                         </li>
                     </div>
@@ -661,7 +687,12 @@
                                   target="_blank"
                                   data-sso="false"
                                   data-journey-click="footer:Click:Living in Europe after the UK leaves the EU">
-                                Living in Europe after the UK leaves the EU
+                                    {{#isWelsh}}
+                                        Byw yn Ewrop ar &ocirc;l i&rsquo;r DU adael yr UE (Saesneg yn unig)
+                                    {{/isWelsh}}
+                                    {{^isWelsh}}
+                                        Living in Europe after the UK leaves the EU
+                                    {{/isWelsh}}
                             </a></p>
                         </li>
 
@@ -670,13 +701,19 @@
                                   target="_blank"
                                   data-sso="false"
                                   data-journey-click="footer:Click:Continue to live in the UK after it leaves the EU">
-                                Continue to live in the UK after it leaves the EU
+                                    {{#isWelsh}}
+                                        Parhau i fyw yn y DU ar &ocirc;l iddi adael yr UE (Saesneg yn unig)
+                                    {{/isWelsh}}
+                                    {{^isWelsh}}
+                                        Continue to live in the UK after it leaves the EU
+                                    {{/isWelsh}}
                             </a></p>
                         </li>
 
                     </div>
                 </ul>
             </div>
+
             <hr>
         {{/showEuExitFooterLink}}
 
