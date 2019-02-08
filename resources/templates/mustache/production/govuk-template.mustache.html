@@ -217,7 +217,13 @@
 <!--end header-->
 
 <div id="global-cookie-message">
-    <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+    {{#isWelsh}}
+        <p>Mae GOV.UK yn defnyddio cwcis i wneud y safle&rsquo;n haws i&rsquo;w ddefnyddio. <a href="/help/cookies">Rhagor o wybodaeth am gwcis</a></p>
+    {{/isWelsh}}
+
+    {{^isWelsh}}
+        <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+    {{/isWelsh}}
 </div>
 
 {{#fullWidthBannerTitle}}
@@ -824,6 +830,7 @@
             {{#taxCodeChangeDate}}                          ga('set', 'dimension76', '{{{taxCodeChangeDate}}}');                          {{/taxCodeChangeDate}}
             {{#taxCodeChangeEdgeCase}}                      ga('set', 'dimension77', '{{{taxCodeChangeEdgeCase}}}');                      {{/taxCodeChangeEdgeCase}}
             {{#taiLandingPageInformation}}                  ga('set', 'dimension78', '{{{taiLandingPageInformation}}}');                  {{/taiLandingPageInformation}}
+            {{#taiCYPlusOneEstimatedIncome}}                ga('set', 'dimension80', '{{{taiCYPlusOneEstimatedIncome}}}');                {{/taiCYPlusOneEstimatedIncome}}
 
             {{#gaCustomEvent}}
                 {{{gaCustomEvent}}}
