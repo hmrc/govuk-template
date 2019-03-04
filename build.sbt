@@ -16,7 +16,7 @@ lazy val library = Project(appName, file("."))
       Resolver.bintrayRepo("hmrc", "releases"),
       Resolver.typesafeRepo("releases")
     ),
-    crossScalaVersions := Seq("2.11.12"),
+    crossScalaVersions := Seq("2.11.12", "2.12.8"),
     routesGenerator    := {
       if (PlayCrossCompilation.playVersion == Play25) {
         StaticRoutesGenerator
