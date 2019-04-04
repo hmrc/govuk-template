@@ -116,6 +116,20 @@
         {{/projectId}}
     {{/optimizely}}
 
+    {{#googleTagManager}}
+        {{#gtmId}}
+            <script>
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-{{gtmId}}');
+            </script>
+        {{/gtmId}}
+
+        {{^gtmId}}
+            <script>
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NDJKHWK');
+            </script>
+        {{/gtmId}}
+    {{/googleTagManager}}
+
     {{#assetsPath}}
         <script src="{{assetsPath}}javascripts/vendor/modernizr.js" type="text/javascript"></script>
     {{/assetsPath}}
@@ -125,6 +139,16 @@
 </head>
 
 <body {{#bodyClass}}class="{{bodyClass}}"{{/bodyClass}}>
+
+    {{#googleTagManager}}
+        {{#gtmId}}
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-{{gtmId}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {{/gtmId}}
+        {{^gtmId}}
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDJKHWK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {{/gtmId}}
+    {{/googleTagManager}}
+
 <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 <div id="skiplink-container">
