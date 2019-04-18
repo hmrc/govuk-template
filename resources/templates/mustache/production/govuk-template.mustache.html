@@ -1,322 +1,541 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lte-ie8" lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="{{^isWelsh}}en{{/isWelsh}}{{#isWelsh}}cy{{/isWelsh}}" class="no-js"><!--<![endif]-->
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <title>
-        {{#pageTitle}}
-            {{ pageTitle }}
-        {{/pageTitle}}
-        {{^pageTitle}}
-            GOV.UK - The best place to find government services and information
-        {{/pageTitle}}
-    </title>
+        <title>
+            {{#pageTitle}}
+                {{ pageTitle }}
+            {{/pageTitle}}
+            {{^pageTitle}}
+                GOV.UK - The best place to find government services and information
+            {{/pageTitle}}
+        </title>
 
-    <script type="text/javascript">
-        (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
-    </script>
-
-
-    <!--[if gt IE 8]><!--><link href="/template/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
-    <!--[if IE 6]><link href="/template/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-    <!--[if IE 7]><link href="/template/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-    <!--[if IE 8]><link href="/template/assets/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-
-    <link href="/template/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
-
-
-    <!--[if IE 8]>
         <script type="text/javascript">
-            (function(){if(window.opera){return;}
-                setTimeout(function(){var a=document,g,b={families:(g=
-                                ["nta"]),urls:["/template/assets/stylesheets/fonts-ie8.css"]},
-                        c="/template/assets/javascripts/vendor/goog/webfont-debug.js",d="script",
-                        e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
-                        ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
-                        .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
-            })()
+            (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
         </script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
+
+
+        <!--[if gt IE 8]><!--><link href="/template/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+        <!--[if IE 6]><link href="/template/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if IE 7]><link href="/template/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if IE 8]><link href="/template/assets/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+        <link href="/template/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
+
+
+        <!--[if IE 8]>
+        <script type="text/javascript">
+                (function(){if(window.opera){return;}
+                    setTimeout(function(){var a=document,g,b={families:(g=
+                                    ["nta"]),urls:["/template/assets/stylesheets/fonts-ie8.css"]},
+                            c="/template/assets/javascripts/vendor/goog/webfont-debug.js",d="script",
+                            e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+                            ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+                            .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+                })()
+            </script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
         <link href="/template/assets/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" />
-    <!--<![endif]-->
+        <!--<![endif]-->
 
 
-    <!--[if lt IE 9]>
+        <!--[if lt IE 9]>
         <script src="/template/assets/javascripts/ie.js" type="text/javascript"></script>
-    <![endif]-->
+        <![endif]-->
 
-    <link rel="shortcut icon" href="/template/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/template/assets/images/favicon.ico" type="image/x-icon" />
 
-    <!-- For third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/assets/images/apple-touch-icon-144x144.png">
-    <!-- For iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/assets/images/apple-touch-icon-114x114.png">
-    <!-- For first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/assets/images/apple-touch-icon-72x72.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/template/assets/images/apple-touch-icon-57x57.png">
+        <!-- For third-generation iPad with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/assets/images/apple-touch-icon-144x144.png">
+        <!-- For iPhone with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/assets/images/apple-touch-icon-114x114.png">
+        <!-- For first- and second-generation iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/assets/images/apple-touch-icon-72x72.png">
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="/template/assets/images/apple-touch-icon-57x57.png">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="/template/assets/images/opengraph-image.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="/template/assets/images/opengraph-image.png">
 
-    <!-- head -->
-    <!--[if lt IE 8 ]>
-        {{#assetsPath}}
-            <link rel="stylesheet" href="{{assetsPath}}stylesheets/application-ie7.min.css" />
-        {{/assetsPath}}
-        {{^assetsPath}}
-            <link rel="stylesheet" href="/assets/3.2.3/stylesheets/application-ie7.min.css" />
-        {{/assetsPath}}
-    <![endif]-->
-    <!--[if IE 8 ]>
-        {{#assetsPath}}
-            <link rel="stylesheet" href="{{assetsPath}}stylesheets/application-ie.min.css" />
-        {{/assetsPath}}
-        {{^assetsPath}}
-            <link rel="stylesheet" href="/assets/3.2.3/stylesheets/application-ie.min.css" />
-        {{/assetsPath}}
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        {{#assetsPath}}
-            <link rel="stylesheet" href="{{assetsPath}}stylesheets/application.min.css" />
-        {{/assetsPath}}
-        {{^assetsPath}}
-            <link rel="stylesheet" href="/assets/3.2.3/stylesheets/application.min.css" />
-        {{/assetsPath}}
-    <!--<![endif]-->
+        <!-- head -->
+        <!--[if lt IE 8 ]>
+            {{#assetsPath}}
+                <link rel="stylesheet" href="{{assetsPath}}stylesheets/application-ie7.min.css" />
+            {{/assetsPath}}
+            {{^assetsPath}}
+                <link rel="stylesheet" href="/assets/3.11.0/stylesheets/application-ie7.min.css" />
+            {{/assetsPath}}
+        <![endif]-->
+        <!--[if IE 8 ]>
+            {{#assetsPath}}
+                <link rel="stylesheet" href="{{assetsPath}}stylesheets/application-ie.min.css" />
+            {{/assetsPath}}
+            {{^assetsPath}}
+                <link rel="stylesheet" href="/assets/3.11.0/stylesheets/application-ie.min.css" />
+            {{/assetsPath}}
+        <![endif]-->
+
+        <!--[if gt IE 8]><!-->
+            {{#assetsPath}}
+                <link rel="stylesheet" href="{{assetsPath}}stylesheets/application.min.css" />
+            {{/assetsPath}}
+            {{^assetsPath}}
+                <link rel="stylesheet" href="/assets/3.11.0/stylesheets/application.min.css" />
+            {{/assetsPath}}
+        <!--<![endif]-->
 
 
-    {{#linkElems}}
-        {{#url}}
-            {{^ieVersionCondition}}
-                <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
-            {{/ieVersionCondition}}
-            {{#ieVersionCondition}}
-                <!--[if {{ieVersionCondition}}]>
+        {{#linkElems}}
+            {{#url}}
+                {{^ieVersionCondition}}
                     <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
-                <![endif]-->
-            {{/ieVersionCondition}}
-        {{/url}}
-    {{/linkElems}}
+                {{/ieVersionCondition}}
+                {{#ieVersionCondition}}
+                    <!--[if {{ieVersionCondition}}]>
+                        <link rel="stylesheet" type="text/css" href="{{url}}" {{#print}}media="print"{{/print}}/>
+                    <![endif]-->
+                {{/ieVersionCondition}}
+            {{/url}}
+        {{/linkElems}}
 
-    {{#optimizelyProjectId}}
-        <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js" type="text/javascript"></script>
-    {{/optimizelyProjectId}}
+        {{#optimizelyProjectId}}
+            <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js" type="text/javascript"></script>
+        {{/optimizelyProjectId}}
 
-    {{#optimizely}}
-        {{#audience}}
-            <script type="text/javascript">
-                var audience = "{{audience}}"
-            </script>
-        {{/audience}}
-        {{#projectId}}
-            <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{projectId}}}.js" type="text/javascript"></script>
-        {{/projectId}}
-    {{/optimizely}}
+        {{#optimizely}}
+            {{#audience}}
+                <script type="text/javascript">
+                    var audience = "{{audience}}"
+                </script>
+            {{/audience}}
+            {{#projectId}}
+                <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{projectId}}}.js" type="text/javascript"></script>
+            {{/projectId}}
+        {{/optimizely}}
 
-    {{#googleTagManager}}
-        {{#gtmId}}
-            <script>
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-{{gtmId}}');
-            </script>
-        {{/gtmId}}
+        {{#googleTagManager}}
+            {{#gtmId}}
+                <script>
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-{{gtmId}}');
+                </script>
+            {{/gtmId}}
 
-        {{^gtmId}}
-            <script>
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NDJKHWK');
-            </script>
-        {{/gtmId}}
-    {{/googleTagManager}}
+            {{^gtmId}}
+                <script>
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NDJKHWK');
+                </script>
+            {{/gtmId}}
+        {{/googleTagManager}}
 
-    {{#assetsPath}}
-        <script src="{{assetsPath}}javascripts/vendor/modernizr.js" type="text/javascript"></script>
-    {{/assetsPath}}
-    {{^assetsPath}}
-        <script src="/assets/3.2.3/javascripts/vendor/modernizr.js" type="text/javascript"></script>
-    {{/assetsPath}}
-</head>
+        {{#assetsPath}}
+            <script src="{{assetsPath}}javascripts/vendor/modernizr.js" type="text/javascript"></script>
+        {{/assetsPath}}
+        {{^assetsPath}}
+            <script src="/assets/3.11.0/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+        {{/assetsPath}}
+    </head>
 
-<body {{#bodyClass}}class="{{bodyClass}}"{{/bodyClass}}>
+    <body {{#bodyClass}}class="{{bodyClass}}"{{/bodyClass}}>
+        {{#googleTagManager}}
+            {{#gtmId}}
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-{{gtmId}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            {{/gtmId}}
+            {{^gtmId}}
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDJKHWK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            {{/gtmId}}
+        {{/googleTagManager}}
 
-    {{#googleTagManager}}
-        {{#gtmId}}
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-{{gtmId}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        {{/gtmId}}
-        {{^gtmId}}
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDJKHWK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        {{/gtmId}}
-    {{/googleTagManager}}
+        <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-<script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-
-<div id="skiplink-container">
-    <div>
-        <a href="#skipto" class="skiplink">Skip to main content</a>
-    </div>
-</div>
-
-<header role="banner" id="global-header" class="with-proposition">
-    <div class="header-wrapper">
-
-        <div class="header-global">
-            <div class="header-logo">
-                <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" data-journey-click="header:Click:GOV UK" id="logo" class="content">
-                    <img src="/template/assets/images/gov.uk_logotype_crown.png" alt=""> GOV.UK
-                </a>
+        <div id="skiplink-container">
+            <div>
+                <a href="#skipto" class="skiplink">Skip to main content</a>
             </div>
         </div>
 
-        <div class="header-proposition">
-            <div class="content">
-                <nav id="proposition-menu" class="header__menu" role="navigation">
-                    {{#navTitle}}
-                        <span class="header__menu__proposition-name">{{navTitle}}</span>
-                    {{/navTitle}}
+        <header role="banner" id="global-header" class="with-proposition">
+            <div class="header-wrapper">
 
-                    {{#showPropositionLinks}}
-                        <a href="#proposition-links" class="js-header-toggle menu">
-
-                            {{#isWelsh}}
-                                Dewislen
-                            {{/isWelsh}}
-
-                            {{^isWelsh}}
-                                Menu
-                            {{/isWelsh}}
-
+                <div class="header-global">
+                    <div class="header-logo">
+                        <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" data-journey-click="header:Click:GOV UK" id="logo" class="content">
+                            <img src="/template/assets/images/gov.uk_logotype_crown.png" alt=""> GOV.UK
                         </a>
-                        <ul id="proposition-links" class="header__menu__proposition-links">
+                    </div>
+                </div>
 
-                            {{#langSelector}}
-                                {{#enUrl}}
-                                    {{#cyUrl}}
+                <div class="header-proposition">
+                    <div class="content">
+                        <nav id="proposition-menu" class="header__menu" role="navigation">
+                            {{#navTitle}}
+                                <span class="header__menu__proposition-name">{{navTitle}}</span>
+                            {{/navTitle}}
+
+                            {{#showPropositionLinks}}
+                                <a href="#proposition-links" class="js-header-toggle menu">
+                                    {{#isWelsh}}
+                                        Dewislen
+                                    {{/isWelsh}}
+
+                                    {{^isWelsh}}
+                                        Menu
+                                    {{/isWelsh}}
+                                </a>
+
+                                <ul id="proposition-links" class="header__menu__proposition-links">
+                                    {{#langSelector}}
+                                        {{#enUrl}}
+                                            {{#cyUrl}}
+                                                {{#isWelsh}}
+                                                    <li>
+                                                        <a id="switchToEnglish" lang="en" href="{{enUrl}}" data-journey-click="link - click:lang-select:English"><small><strong class="bold">English</strong></small></a>
+                                                        <span class="faded-text--small"><strong class="bold">| Cymraeg</strong></span>
+                                                    </li>
+                                                {{/isWelsh}}
+
+                                                {{^isWelsh}}
+                                                    <li>
+                                                        <span class="faded-text--small"><strong class="bold">English |</strong></span>
+                                                        <a id="switchToWelsh" lang="cy" href="{{cyUrl}}" data-journey-click="link - click:lang-select:Cymraeg"><small><strong class="bold">Cymraeg</strong></small></a>
+                                                    </li>
+                                                {{/isWelsh}}
+                                            {{/cyUrl}}
+                                        {{/enUrl}}
+                                    {{/langSelector}}
+
+                                    {{#hideAccountMenu}}
+                                        {{#signOutUrl}}
+                                            <li>
+                                                <a id="logOutNavHref" href="{{{signOutUrl}}}" data-journey-click="primary-navigation:Click:Sign out">
+                                                    <small>
+                                                        <strong class="bold">
+                                                            {{#isWelsh}}
+                                                                Allgofnodi
+                                                            {{/isWelsh}}
+
+                                                            {{^isWelsh}}
+                                                                Sign out
+                                                            {{/isWelsh}}
+                                                        </strong>
+                                                    </small>
+                                                </a>
+                                            </li>
+                                        {{/signOutUrl}}
+                                    {{/hideAccountMenu}}
+
+                                </ul>
+                            {{/showPropositionLinks}}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end header-->
+
+        <div id="global-cookie-message">
+            {{#isWelsh}}
+                <p>Mae GOV.UK yn defnyddio cwcis i wneud y safle&rsquo;n haws i&rsquo;w ddefnyddio. <a href="/help/cookies">Rhagor o wybodaeth am gwcis</a></p>
+            {{/isWelsh}}
+
+            {{^isWelsh}}
+                <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
+            {{/isWelsh}}
+        </div>
+
+        {{#fullWidthBannerTitle}}
+            <div id="full-width-banner" class="full-width-banner">
+                <div class="centered-content visible full-width-banner__container" aria-hidden="false">
+                    <div class="full-width-banner__title">
+                        {{fullWidthBannerTitle}}
+                    </div>
+                    {{#fullWidthBannerLink}}
+                        <a id="full-width-banner-link" href="{{fullWidthBannerLink}}" target="_blank" data-journey-click="link - click:{{fullWidthBannerGaAction}}:{{fullWidthBannerText}}">
+                            {{fullWidthBannerText}}
+                        </a>
+                    {{/fullWidthBannerLink}}
+
+                    {{^fullWidthBannerLink}}
+                        <p>
+                            {{fullWidthBannerText}}
+                        </p>
+                    {{/fullWidthBannerLink}}
+
+                    {{#fullWidthBannerDismissText}}
+                        <a class="full-width-banner__close" href="#" role="button">
+                            <span aria-hidden="true">
+                                {{fullWidthBannerDismissText}}
+                            </span>
+                        </a>
+                    {{/fullWidthBannerDismissText}}
+                </div>
+            </div>
+        {{/fullWidthBannerTitle}}
+
+        <main id="wrapper" role="main" {{#mainClass}}class="{{mainClass}}"{{/mainClass}} {{{mainAttributes}}}>
+            <div id="content">
+
+                <div class="service-info">
+
+                    {{#showOrganisationLogo}}
+                        <div class="logo">
+                            <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span>
+                        </div>
+                    {{/showOrganisationLogo}}
+
+                    {{^hideAccountMenu}}
+                        <nav id="secondary-nav" class="account-menu" role="navigation" aria-label="Account">
+                            <a href="/personal-account" class="account-menu__link account-menu__link--home{{#activeTabHome}} account-menu__link--active{{/activeTabHome}}" data-journey-click="link - click:utility-nav:Account home">
+                                <span class="account-icon account-icon--home">
+                                    {{#isWelsh}}
+                                        Hafan y cyfrif
+                                    {{/isWelsh}}
+
+                                    {{^isWelsh}}
+                                        Account home
+                                    {{/isWelsh}}
+                                </span>
+                            </a>
+
+                            <a href="#" class="account-menu__link account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false" data-journey-click="link - click:utility-nav:Account menu">
+                                {{#isWelsh}}
+                                    Dewislen y cyfrif
+                                {{/isWelsh}}
+
+                                {{^isWelsh}}
+                                    Account menu
+                                {{/isWelsh}}
+                            </a>
+
+                            <ul class="account-menu__main js-hidden">
+                                <li class="account-menu__link--back hidden" aria-hidden="true">
+                                    <a href="#" class="account-menu__link" data-journey-click="link - click:utility-nav:Back">
                                         {{#isWelsh}}
-                                            <li>
-                                                <a id="switchToEnglish" lang="en" href="{{enUrl}}" data-journey-click="link - click:lang-select:English"><small><strong class="bold">English</strong></small></a>
-                                                <span class="faded-text--small"><strong class="bold">| Cymraeg</strong></span>
-                                            </li>
+                                            Yn &#244;l
                                         {{/isWelsh}}
+
                                         {{^isWelsh}}
-                                            <li>
-                                                <span class="faded-text--small"><strong class="bold">English |</strong></span>
-                                                <a id="switchToWelsh" lang="cy" href="{{cyUrl}}" data-journey-click="link - click:lang-select:Cymraeg"><small><strong class="bold">Cymraeg</strong></small></a>
-                                            </li>
+                                            Back
                                         {{/isWelsh}}
-                                    {{/cyUrl}}
-                                {{/enUrl}}
-                            {{/langSelector}}
+                                    </a>
+                                </li>
 
-                            {{#hideAccountMenu}}
-                                {{#signOutUrl}}
+                                {{#isGovernmentGateway}}
                                     <li>
-                                        <a id="logOutNavHref" href="{{{signOutUrl}}}" data-journey-click="primary-navigation:Click:Sign out">
-                                            <small>
-                                                <strong class="bold">
+                                        <a href="/personal-account/messages" class="account-menu__link{{#activeTabMessages}} account-menu__link--active{{/activeTabMessages}}" data-journey-click="link - click:utility-nav:Messages">
+                                            {{#isWelsh}}
+                                                Negeseuon
+                                            {{/isWelsh}}
 
+                                            {{^isWelsh}}
+                                                Messages
+                                            {{/isWelsh}}
+
+                                            {{#unreadMessageCount}}
+                                                <span class="badge" aria-label="Number of unread messages">{{unreadMessageCount}}</span>
+                                            {{/unreadMessageCount}}
+                                        </a>
+                                    </li>
+                                {{/isGovernmentGateway}}
+
+                                <li>
+                                    <a href="/track" class="account-menu__link{{#activeTabCheckProgress}} account-menu__link--active{{/activeTabCheckProgress}}" data-journey-click="link - click:utility-nav:Check progress">
+                                        {{#isWelsh}}
+                                            Gwirio cynnydd
+                                        {{/isWelsh}}
+
+                                        {{^isWelsh}}
+                                            Check progress
+                                        {{/isWelsh}}
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more{{#activeTabYourAccount}} account-menu__link--active{{/activeTabYourAccount}}" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
+                                        {{#isWelsh}}
+                                            Eich cyfrif
+                                        {{/isWelsh}}
+
+                                        {{^isWelsh}}
+                                            Your account
+                                        {{/isWelsh}}
+                                    </a>
+
+                                    <div class="subnav js-hidden" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
+                                        {{#isGovernmentGateway}}
+                                            {{#isSa}}
+                                                <div class="column-one-third subnav__section">
+                                                    <p class="subnav__section__heading">
+                                                        {{#isWelsh}}
+                                                            Trethi busnes
+                                                        {{/isWelsh}}
+
+                                                        {{^isWelsh}}
+                                                            Business taxes
+                                                        {{/isWelsh}}
+                                                    </p>
+                                                    <div>
+                                                        <a href="/business-account" data-journey-click="link - click:utility-nav:View your business tax account">
+                                                            {{#isWelsh}}
+                                                                Bwrw golwg ar eich cyfrif treth busnes
+                                                            {{/isWelsh}}
+
+                                                            {{^isWelsh}}
+                                                                View your business tax account
+                                                            {{/isWelsh}}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            {{/isSa}}
+                                        {{/isGovernmentGateway}}
+
+                                        {{#isVerify}}
+                                            <div class="column-one-third subnav__section">
+                                                <p class="subnav__section__heading">
                                                     {{#isWelsh}}
-                                                        Allgofnodi
+                                                        Gosodiadau diogelwch
                                                     {{/isWelsh}}
 
                                                     {{^isWelsh}}
-                                                        Sign out
+                                                        Security settings
+                                                    {{/isWelsh}}
+                                                </p>
+                                                <div>
+                                                    <a href="/trusted-helpers/select-a-service" data-journey-click="link - click:utility-nav:Manage your trusted helpers">
+                                                        {{#isWelsh}}
+                                                            Rheoli&#39;ch cynorthwywyr y gellir ymddiried ynddynt
+                                                        {{/isWelsh}}
+
+                                                        {{^isWelsh}}
+                                                            Manage your trusted helpers
+                                                        {{/isWelsh}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {{/isVerify}}
+
+                                        {{^isVerify}}
+                                            <div class="{{^isGovernmentGateway}}column-half {{/isGovernmentGateway}}
+                                                    {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
+                                                    {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
+                                                    subnav__section">
+                                                <p class="subnav__section__heading">
+                                                    {{#isWelsh}}
+                                                        Gosodiadau di-bapur
                                                     {{/isWelsh}}
 
-                                                </strong>
-                                            </small>
+                                                    {{^isWelsh}}
+                                                        Paperless settings
+                                                    {{/isWelsh}}
+                                                </p>
+                                                <div>
+                                                    <a href="/personal-account/preferences" data-journey-click="link - click:utility-nav:Manage your paperless settings">
+                                                        {{#isWelsh}}
+                                                            Rheoli&#39;ch gosodiadau di-bapur
+                                                        {{/isWelsh}}
+
+                                                        {{^isWelsh}}
+                                                            Manage your paperless settings
+                                                        {{/isWelsh}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {{/isVerify}}
+
+                                        <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
+                                                        {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
+                                                        {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
+                                                        {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
+                                            <p class="subnav__section__heading">
+                                                {{#isWelsh}}
+                                                    Manylion personol
+                                                {{/isWelsh}}
+
+                                                {{^isWelsh}}
+                                                    Personal details
+                                                {{/isWelsh}}
+                                            </p>
+                                            <div>
+                                                <a href="/personal-account/personal-details" data-journey-click="link - click:utility-nav:Manage your personal details">
+                                                    {{#isWelsh}}
+                                                        Rheoli&#39;ch manylion personol
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                        Manage your personal details
+                                                    {{/isWelsh}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                {{#signOutUrl}}
+                                    <li>
+                                        <a href="{{{signOutUrl}}}" class="account-menu__link" data-journey-click="link - click:utility-nav:Sign out">
+                                            {{#isWelsh}}
+                                                Allgofnodi
+                                            {{/isWelsh}}
+
+                                            {{^isWelsh}}
+                                                Sign out
+                                            {{/isWelsh}}
                                         </a>
                                     </li>
                                 {{/signOutUrl}}
-                            {{/hideAccountMenu}}
+                            </ul>
+                        </nav>
 
-                        </ul>
-                    {{/showPropositionLinks}}
+                    {{/hideAccountMenu}}
 
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<!--end header-->
+                    <!-- begin backlinkUrl -->
+                    {{#backlinkUrl}}
+                        <div class="grid-row">
+                            <div class="column-half">
+                                <div aria-hidden="true">
+                                    <a href="{{backlinkUrl}}" class="link-back">
+                                        {{#backlinkUrlText}}
+                                            {{backlinkUrlText}}
+                                        {{/backlinkUrlText}}
 
-<div id="global-cookie-message">
-    <p>GOV.UK uses cookies to make the site simpler. <a href="/help/cookies">Find out more about cookies</a></p>
-</div>
+                                        {{^backlinkUrlText}}
+                                            {{#isWelsh}}
+                                                Yn &#244;l
+                                            {{/isWelsh}}
 
-{{#fullWidthBannerTitle}}
-    <div id="full-width-banner" class="full-width-banner">
-        <div class="centered-content visible full-width-banner__container" aria-hidden="false">
-            <div class="full-width-banner__title">
-                {{fullWidthBannerTitle}}
-            </div>
-            {{#fullWidthBannerLink}}
-                <a id="full-width-banner-link" href="{{fullWidthBannerLink}}" target="_blank" data-journey-click="link - click:{{fullWidthBannerGaAction}}:{{fullWidthBannerText}}">
-                    {{fullWidthBannerText}}
-                </a>
-            {{/fullWidthBannerLink}}
-            {{^fullWidthBannerLink}}
-                <p>
-                    {{fullWidthBannerText}}
-                </p>
-            {{/fullWidthBannerLink}}
-            {{#fullWidthBannerDismissText}}
-                <a class="full-width-banner__close" href="#" role="button">
-                    <span aria-hidden="true">
-                        {{fullWidthBannerDismissText}}
-                    </span>
-                </a>
-            {{/fullWidthBannerDismissText}}
-        </div>
-    </div>
-{{/fullWidthBannerTitle}}
+                                            {{^isWelsh}}
+                                                Back
+                                            {{/isWelsh}}
+                                        {{/backlinkUrlText}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/backlinkUrl}}
+                    <!-- end backlinkUrl -->
 
-<main id="wrapper" role="main" {{#mainClass}}class="{{mainClass}}"{{/mainClass}} {{{mainAttributes}}}>
-    <div id="content">
-
-        <div class="service-info">
-
-            {{#showOrganisationLogo}}
-
-                <div class="logo">
-                    <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span>
                 </div>
 
-            {{/showOrganisationLogo}}
+                <!-- begin actingAttorneyBanner -->
+                {{{ actingAttorneyBanner }}}
+                <!-- end actingAttorneyBanner -->
 
-            {{^hideAccountMenu}}
+                <div id="skipto">
+                    <!-- begin mainContentHeader -->
+                    {{{ mainContentHeader }}}
+                    <!-- end mainContentHeader -->
 
-                <nav id="secondary-nav" class="account-menu" role="navigation" aria-label="Account">
-                    <a href="/personal-account" class="account-menu__link account-menu__link--home{{#activeTabHome}} account-menu__link--active{{/activeTabHome}}" data-journey-click="link - click:utility-nav:Account home">
-                        <span class="account-icon account-icon--home">
+                    <!-- begin article -->
+                    {{{ article }}}
+                    <!-- end article -->
 
-                            {{#isWelsh}}
-                                Hafan y cyfrif
-                            {{/isWelsh}}
-
-                            {{^isWelsh}}
-                                Account home
-                            {{/isWelsh}}
-
-                        </span>
-                    </a>
-
-                    <a href="#" class="account-menu__link account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false" data-journey-click="link - click:utility-nav:Account menu">
-
-                        {{#isWelsh}}
-                            Dewislen y cyfrif
-                        {{/isWelsh}}
-
-                        {{^isWelsh}}
-                            Account menu
-                        {{/isWelsh}}
-
-                    </a>
-
-                    <ul class="account-menu__main js-hidden">
-                        <li class="account-menu__link--back hidden" aria-hidden="true">
-                            <a href="#" class="account-menu__link" data-journey-click="link - click:utility-nav:Back">
-
+                    <!-- begin backlinkUrl (Screen Reader) -->
+                    {{#backlinkUrl}}
+                        <div class="visuallyhidden">
+                            <a href="{{backlinkUrl}}">
                                 {{#isWelsh}}
                                     Yn &#244;l
                                 {{/isWelsh}}
@@ -324,585 +543,308 @@
                                 {{^isWelsh}}
                                     Back
                                 {{/isWelsh}}
-
-                            </a>
-                        </li>
-
-                        {{#isGovernmentGateway}}
-                            <li>
-                                <a href="/personal-account/messages" class="account-menu__link{{#activeTabMessages}} account-menu__link--active{{/activeTabMessages}}" data-journey-click="link - click:utility-nav:Messages">
-
-                                    {{#isWelsh}}
-                                        Negeseuon
-                                    {{/isWelsh}}
-
-                                    {{^isWelsh}}
-                                        Messages
-                                    {{/isWelsh}}
-
-                                    {{#unreadMessageCount}}
-                                        <span class="badge" aria-label="Number of unread messages">{{unreadMessageCount}}</span>
-                                    {{/unreadMessageCount}}
-
-                                </a>
-                            </li>
-                        {{/isGovernmentGateway}}
-
-                        <li>
-                            <a href="/track" class="account-menu__link{{#activeTabCheckProgress}} account-menu__link--active{{/activeTabCheckProgress}}" data-journey-click="link - click:utility-nav:Check progress">
-
-                                {{#isWelsh}}
-                                    Gwirio cynnydd
-                                {{/isWelsh}}
-
-                                {{^isWelsh}}
-                                    Check progress
-                                {{/isWelsh}}
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more{{#activeTabYourAccount}} account-menu__link--active{{/activeTabYourAccount}}" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
-
-                                {{#isWelsh}}
-                                    Eich cyfrif
-                                {{/isWelsh}}
-
-                                {{^isWelsh}}
-                                    Your account
-                                {{/isWelsh}}
-
-                            </a>
-
-                            <div class="subnav js-hidden" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
-
-                                {{#isGovernmentGateway}}
-                                    {{#isSa}}
-
-                                        <div class="column-one-third subnav__section">
-                                            <p class="subnav__section__heading">
-
-                                                {{#isWelsh}}
-                                                    Trethi busnes
-                                                {{/isWelsh}}
-
-                                                {{^isWelsh}}
-                                                    Business taxes
-                                                {{/isWelsh}}
-
-                                            </p>
-                                            <div>
-                                                <a href="/business-account" data-journey-click="link - click:utility-nav:View your business tax account">
-
-                                                    {{#isWelsh}}
-                                                        Bwrw golwg ar eich cyfrif treth busnes
-                                                    {{/isWelsh}}
-
-                                                    {{^isWelsh}}
-                                                        View your business tax account
-                                                    {{/isWelsh}}
-
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    {{/isSa}}
-                                {{/isGovernmentGateway}}
-
-                                {{#isVerify}}
-
-                                    <div class="column-one-third subnav__section">
-                                        <p class="subnav__section__heading">
-
-                                            {{#isWelsh}}
-                                                Gosodiadau diogelwch
-                                            {{/isWelsh}}
-
-                                            {{^isWelsh}}
-                                                Security settings
-                                            {{/isWelsh}}
-
-                                        </p>
-                                        <div>
-                                            <a href="/trusted-helpers/select-a-service" data-journey-click="link - click:utility-nav:Manage your trusted helpers">
-
-                                                {{#isWelsh}}
-                                                    Rheoli&#39;ch cynorthwywyr y gellir ymddiried ynddynt
-                                                {{/isWelsh}}
-
-                                                {{^isWelsh}}
-                                                    Manage your trusted helpers
-                                                {{/isWelsh}}
-
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                {{/isVerify}}
-
-
-                                {{^isVerify}}
-                                <div class="{{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
-                                subnav__section">
-                                    <p class="subnav__section__heading">
-
-                                        {{#isWelsh}}
-                                            Gosodiadau di-bapur
-                                        {{/isWelsh}}
-
-                                        {{^isWelsh}}
-                                            Paperless settings
-                                        {{/isWelsh}}
-
-                                    </p>
-                                    <div>
-                                        <a href="/personal-account/preferences" data-journey-click="link - click:utility-nav:Manage your paperless settings">
-
-                                            {{#isWelsh}}
-                                                Rheoli&#39;ch gosodiadau di-bapur
-                                            {{/isWelsh}}
-
-                                            {{^isWelsh}}
-                                                Manage your paperless settings
-                                            {{/isWelsh}}
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                {{/isVerify}}
-
-                                <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
-                                {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
-                                    <p class="subnav__section__heading">
-
-                                        {{#isWelsh}}
-                                            Manylion personol
-                                        {{/isWelsh}}
-
-                                        {{^isWelsh}}
-                                            Personal details
-                                        {{/isWelsh}}
-
-                                    </p>
-                                    <div>
-                                        <a href="/personal-account/personal-details" data-journey-click="link - click:utility-nav:Manage your personal details">
-
-                                            {{#isWelsh}}
-                                                Rheoli&#39;ch manylion personol
-                                            {{/isWelsh}}
-
-                                            {{^isWelsh}}
-                                                Manage your personal details
-                                            {{/isWelsh}}
-
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        {{#signOutUrl}}
-                            <li>
-                                <a href="{{{signOutUrl}}}" class="account-menu__link" data-journey-click="link - click:utility-nav:Sign out">
-
-                                    {{#isWelsh}}
-                                        Allgofnodi
-                                    {{/isWelsh}}
-
-                                    {{^isWelsh}}
-                                        Sign out
-                                    {{/isWelsh}}
-
-                                </a>
-                            </li>
-                        {{/signOutUrl}}
-                    </ul>
-                </nav>
-
-            {{/hideAccountMenu}}
-
-            <!-- begin backlinkUrl -->
-            {{#backlinkUrl}}
-                <div class="grid-row">
-                    <div class="column-half">
-                        <div aria-hidden="true">
-                            <a href="{{backlinkUrl}}" class="link-back">
-
-                                {{#backlinkUrlText}}
-                                    {{backlinkUrlText}}
-                                {{/backlinkUrlText}}
-
-                                {{^backlinkUrlText}}
-
-                                    {{#isWelsh}}
-                                        Yn &#244;l
-                                    {{/isWelsh}}
-
-                                    {{^isWelsh}}
-                                        Back
-                                    {{/isWelsh}}
-
-                                {{/backlinkUrlText}}
-
                             </a>
                         </div>
+                    {{/backlinkUrl}}
+                    <!-- end backlinkUrl (Screen Reader) -->
+
+                    <!-- begin sidebar -->
+                    {{{ sidebar }}}
+                    <!-- end sidebar -->
+
+                    <!-- begin getHelpForm -->
+                    {{{ getHelpForm }}}
+                    <!-- end getHelpForm -->
+
+                </div>
+
+                {{#betaBanner}}
+                    <div class="grid-row">
+                        <div class="column-full">
+                            <div class="beta-banner beta-banner--borderless">
+                                <p>
+                                    <strong class="phase-tag">BETA</strong>
+                                    <span>
+                                        {{#isWelsh}}
+                                            Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                                            {{#feedbackIdentifier}}
+                                                {{^authenticatedUser}}
+                                                    &#8208; bydd eich
+                                                    <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                                        adborth</a>
+                                                    yn ein helpu i&#39;w wella.
+                                                {{/authenticatedUser}}
+                                                {{#authenticatedUser}}
+                                                    &#8208; bydd eich
+                                                    <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                                        adborth</a>
+                                                    yn ein helpu i&#39;w wella.
+                                                {{/authenticatedUser}}
+                                            {{/feedbackIdentifier}}
+                                        {{/isWelsh}}
+
+                                        {{^isWelsh}}
+                                            This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
+                                            {{#feedbackIdentifier}}
+                                                {{^authenticatedUser}}
+                                                    &#8208; your
+                                                    <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                                        feedback</a>
+                                                    will help us to improve it.
+                                                {{/authenticatedUser}}
+                                                {{#authenticatedUser}}
+                                                    &#8208; your
+                                                    <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
+                                                        feedback</a>
+                                                    will help us to improve it.
+                                                {{/authenticatedUser}}
+                                            {{/feedbackIdentifier}}
+                                        {{/isWelsh}}
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {{/backlinkUrl}}
-            <!-- end backlinkUrl -->
+                {{/betaBanner}}
 
-        </div>
+            </div>
+        </main>
 
-        <!-- begin actingAttorneyBanner -->
-        {{{ actingAttorneyBanner }}}
-        <!-- end actingAttorneyBanner -->
+        <footer class="group js-footer" id="footer" role="contentinfo">
 
-        <div id="skipto">
+            <div class="footer-wrapper">
+                {{{ footerTop }}}
 
-            <!-- begin mainContentHeader -->
-            {{{ mainContentHeader }}}
-            <!-- end mainContentHeader -->
+                <div class="footer-meta">
+                    <div class="footer-meta-inner">
+                        <h2 class="visuallyhidden">
+                            {{#isWelsh}}
+                                Cysylltiadau cymorth
+                            {{/isWelsh}}
 
-            <!-- begin article -->
-            {{{ article }}}
-            <!-- end article -->
+                            {{^isWelsh}}
+                                Support links
+                            {{/isWelsh}}
+                        </h2>
+                        <ul class="platform-help-links">
+                            <li>
+                                <a href="/help/cookies" target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">
+                                    {{#isWelsh}}
+                                        Cwcis
+                                    {{/isWelsh}}
 
-            <!-- begin backlinkUrl (Screen Reader) -->
-            {{#backlinkUrl}}
-                <div class="visuallyhidden">
-                    <a href="{{backlinkUrl}}">
+                                    {{^isWelsh}}
+                                        Cookies
+                                    {{/isWelsh}}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help/privacy" target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">
+                                    {{#isWelsh}}
+                                        Polisi preifatrwydd
+                                    {{/isWelsh}}
 
-                        {{#isWelsh}}
-                            Yn &#244;l
-                        {{/isWelsh}}
+                                    {{^isWelsh}}
+                                        Privacy policy
+                                    {{/isWelsh}}
+                                </a>
+                            </li>
 
-                        {{^isWelsh}}
-                            Back
-                        {{/isWelsh}}
+                            {{#termsAndConditionFooterLink}}
+                                {{#url}}
+                                    {{#text}}
+                                        <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
+                                    {{/text}}
+                                {{/url}}
+                            {{/termsAndConditionFooterLink}}
 
-                    </a>
-                </div>
-            {{/backlinkUrl}}
-            <!-- end backlinkUrl (Screen Reader) -->
+                            {{^termsAndConditionFooterLink}}
+                                <li>
+                                    <a href="/help/terms-and-conditions" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">
+                                        {{#isWelsh}}
+                                            Telerau ac amodau
+                                        {{/isWelsh}}
 
-            <!-- begin sidebar -->
-            {{{ sidebar }}}
-            <!-- end sidebar -->
+                                        {{^isWelsh}}
+                                            Terms and conditions
+                                        {{/isWelsh}}
+                                    </a>
+                                </li>
+                            {{/termsAndConditionFooterLink}}
 
-            <!-- begin getHelpForm -->
-            {{{ getHelpForm }}}
-            <!-- end getHelpForm -->
+                            <li>
+                                <a href="https://www.gov.uk/help" target="_blank" rel="noopener noreferrer" data-sso="false" data-journey-click="footer:Click:Help">
+                                    {{#isWelsh}}
+                                        Help wrth ddefnyddio GOV.UK
+                                    {{/isWelsh}}
 
-        </div>
+                                    {{^isWelsh}}
+                                        Help using GOV.UK
+                                    {{/isWelsh}}
+                                </a>
+                            </li>
 
-        {{#betaBanner}}
-            <div class="grid-row">
-                <div class="column-full">
-                    <div class="beta-banner beta-banner--borderless">
-                        <p>
-                            <strong class="phase-tag">BETA</strong>
-                            <span>
+                            {{#additionalFooterLinks}}
+                                {{#url}}
+                                    {{#text}}
+                                        <li><a href="{{{url}}}">{{text}}</a></li>
+                                    {{/text}}
+                                {{/url}}
+                            {{/additionalFooterLinks}}
+                        </ul>
+
+                        <div class="open-government-licence">
+                            <h2>
+                                <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">
+                                    <img src="/template/assets/images/open-government-licence_2x.png" alt="Open Government Licence">
+                                </a>
+                            </h2>
+                            <p>
                                 {{#isWelsh}}
-                                    Mae hwn yn wasanaeth newydd{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
-                                    {{#feedbackIdentifier}}
-                                        {{^authenticatedUser}}
-                                            – bydd eich
-                                            <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                                adborth</a>
-                                            yn ein helpu i&#39;w wella.
-                                        {{/authenticatedUser}}
-                                        {{#authenticatedUser}}
-                                            – bydd eich
-                                            <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                                adborth</a>
-                                            yn ein helpu i&#39;w wella.
-                                        {{/authenticatedUser}}
-                                    {{/feedbackIdentifier}}
+                                    Mae&#39;r holl gynnwys ar gael dan y <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">Drwydded Llywodraeth Agored, fersiwn 3.0</a>, oni nodir yn wahanol
                                 {{/isWelsh}}
 
                                 {{^isWelsh}}
-                                    This is a new service{{^feedbackIdentifier}}.{{/feedbackIdentifier}}
-                                    {{#feedbackIdentifier}}
-                                        {{^authenticatedUser}}
-                                            – your
-                                            <a id="feedback-link" href="/contact/beta-feedback-unauthenticated?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                                feedback</a>
-                                            will help us to improve it.
-                                        {{/authenticatedUser}}
-                                        {{#authenticatedUser}}
-                                            – your
-                                            <a id="feedback-link" href="/contact/beta-feedback?service={{feedbackIdentifier}}" data-sso="false" data-journey-click="other-global:Click:Feedback">
-                                                feedback</a>
-                                            will help us to improve it.
-                                        {{/authenticatedUser}}
-                                    {{/feedbackIdentifier}}
+                                    All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">Open Government Licence v3.0</a>, except where otherwise stated
                                 {{/isWelsh}}
-                            </span>
+                            </p>
+                        </div>
+                    </div>
 
-                        </p>
+                    <div class="copyright">
+                        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank" rel="noopener noreferrer">
+                            {{#isWelsh}}
+                                &copy; Hawlfraint y Goron
+                            {{/isWelsh}}
+
+                            {{^isWelsh}}
+                                &copy; Crown Copyright
+                            {{/isWelsh}}
+                        </a>
                     </div>
                 </div>
             </div>
-        {{/betaBanner}}
+        </footer>
 
-    </div>
-</main>
+        <!--end footer-->
 
-<footer class="group js-footer" id="footer" role="contentinfo">
+        <div id="global-app-error" class="app-error hidden"></div>
 
-    <div class="footer-wrapper">
+        {{#googleAnalytics}}
+            {{#trackingId}}
+                <script type="text/javascript">
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        {{{ footerTop }}}
+                    ga('create', '{{trackingId}}', '{{#cookieDomain}}{{cookieDomain}}{{/cookieDomain}}{{^cookieDomain}}auto{{/cookieDomain}}');
+                    ga('set', 'anonymizeIp', true);
 
-        <div class="footer-meta">
-            <div class="footer-meta-inner">
-                <h2 class="visuallyhidden">
+                    {{#fullPagePath}}                               ga('set', 'dimension1', '{{{fullPagePath}}}');                                {{/fullPagePath}}
+                    {{#taxType}}                                    ga('set', 'dimension2', '{{{taxType}}}');                                     {{/taxType}}
+                    {{#cardType}}                                   ga('set', 'dimension3', '{{{cardType}}}');                                    {{/cardType}}
+                    {{#userStatus}}                                 ga('set', 'dimension4', '{{{userStatus}}}');                                  {{/userStatus}}
+                    {{#experimentCohorts}}                          ga('set', 'dimension5', '{{{experimentCohorts}}}');                           {{/experimentCohorts}}
+                    {{#identityVerificationLoginOrigin}}            ga('set', 'dimension6', '{{{identityVerificationLoginOrigin}}}');             {{/identityVerificationLoginOrigin}}
+                    {{#scenarioType}}                               ga('set', 'dimension7', '{{{scenarioType}}}');                                {{/scenarioType}}
+                    {{#forecastValue}}                              ga('set', 'dimension8', '{{{forecastValue}}}');                               {{/forecastValue}}
+                    {{#qualifyingYears}}                            ga('set', 'dimension10', '{{{qualifyingYears}}}');                            {{/qualifyingYears}}
+                    {{#gaps}}                                       ga('set', 'dimension11', '{{{gaps}}}');                                       {{/gaps}}
+                    {{#payableGaps}}                                ga('set', 'dimension12', '{{{payableGaps}}}');                                {{/payableGaps}}
+                    {{#yearsToContribute}}                          ga('set', 'dimension13', '{{{yearsToContribute}}}');                          {{/yearsToContribute}}
+                    {{#contractedOut}}                              ga('set', 'dimension14', '{{{contractedOut}}}');                              {{/contractedOut}}
+                    {{#statePensionAge}}                            ga('set', 'dimension15', '{{{statePensionAge}}}');                            {{/statePensionAge}}
+                    {{#copeAmount}}                                 ga('set', 'dimension16', '{{{copeAmount}}}');                                 {{/copeAmount}}
+                    {{#startDate}}                                  ga('set', 'dimension17', '{{{startDate}}}');                                  {{/startDate}}
+                    {{#returnCount}}                                ga('set', 'dimension18', '{{{returnCount}}}');                                {{/returnCount}}
+                    {{#referenceNumber}}                            ga('set', 'dimension19', '{{{referenceNumber}}}');                            {{/referenceNumber}}
+                    {{#nispExclusionType}}                          ga('set', 'dimension20', '{{{nispExclusionType}}}');                          {{/nispExclusionType}}
+                    {{#forecastOnly}}                               ga('set', 'dimension21', '{{{forecastOnly}}}');                               {{/forecastOnly}}
+                    {{#authenticationProvider}}                     ga('set', 'dimension22', '{{{authenticationProvider}}}');                     {{/authenticationProvider}}
+                    {{#sosOrigin}}                                  ga('set', 'dimension23', '{{{sosOrigin}}}');                                  {{/sosOrigin}}
+                    {{#sosJourneyType}}                             ga('set', 'dimension24', '{{{sosJourneyType}}}');                             {{/sosJourneyType}}
+                    {{#sosConfidenceValue}}                         ga('set', 'dimension25', '{{{sosConfidenceValue}}}');                         {{/sosConfidenceValue}}
+                    {{#tamcMultiYearApplication}}                   ga('set', 'dimension26', '{{{tamcMultiYearApplication}}}');                   {{/tamcMultiYearApplication}}
+                    {{#tamcCurrentYearOnly}}                        ga('set', 'dimension27', '{{{tamcCurrentYearOnly}}}');                        {{/tamcCurrentYearOnly}}
+                    {{#tamcPreviousYearOnly}}                       ga('set', 'dimension28', '{{{tamcPreviousYearOnly}}}');                       {{/tamcPreviousYearOnly}}
+                    {{#tamcTransferorChangeInYourIncome}}           ga('set', 'dimension29', '{{{tamcTransferorChangeInYourIncome}}}');           {{/tamcTransferorChangeInYourIncome}}
+                    {{#tamcTransferorCancels}}                      ga('set', 'dimension30', '{{{tamcTransferorCancels}}}');                      {{/tamcTransferorCancels}}
+                    {{#tamcTransferorPreviousTaxYear}}              ga('set', 'dimension31', '{{{tamcTransferorPreviousTaxYear}}}');              {{/tamcTransferorPreviousTaxYear}}
+                    {{#tamcTransferorChooseStartOfYear}}            ga('set', 'dimension32', '{{{tamcTransferorChooseStartOfYear}}}');            {{/tamcTransferorChooseStartOfYear}}
+                    {{#tamcTransferorChooseEndOfYear}}              ga('set', 'dimension33', '{{{tamcTransferorChooseEndOfYear}}}');              {{/tamcTransferorChooseEndOfYear}}
+                    {{#tamcRecipientDivorcesCurrentYear}}           ga('set', 'dimension34', '{{{tamcRecipientDivorcesCurrentYear}}}');           {{/tamcRecipientDivorcesCurrentYear}}
+                    {{#tamcRecipientDivorcesPreviousYear}}          ga('set', 'dimension35', '{{{tamcRecipientDivorcesPreviousYear}}}');          {{/tamcRecipientDivorcesPreviousYear}}
+                    {{#tamcRecipientRejects}}                       ga('set', 'dimension36', '{{{tamcRecipientRejects}}}');                       {{/tamcRecipientRejects}}
+                    {{#tamcRecipientRejectsEndedRelationship}}      ga('set', 'dimension37', '{{{tamcRecipientRejectsEndedRelationship}}}');      {{/tamcRecipientRejectsEndedRelationship}}
+                    {{#authProvider}}                               ga('set', 'dimension38', '{{{authProvider}}}');                               {{/authProvider}}
+                    {{#confidenceLevel}}                            ga('set', 'dimension39', '{{{confidenceLevel}}}');                            {{/confidenceLevel}}
+                    {{#ageOnVisit}}                                 ga('set', 'dimension40', '{{{ageOnVisit}}}');                                 {{/ageOnVisit}}
+                    {{#gender}}                                     ga('set', 'dimension41', '{{{gender}}}');                                     {{/gender}}
+                    {{#valueOfPayment}}                             ga('set', 'dimension42', '{{{valueOfPayment}}}');                             {{/valueOfPayment}}
+                    {{#reconciliationStatus}}                       ga('set', 'dimension43', '{{{reconciliationStatus}}}');                       {{/reconciliationStatus}}
+                    {{#paymentStatus}}                              ga('set', 'dimension44', '{{{paymentStatus}}}');                              {{/paymentStatus}}
+                    {{#dueDateOfLiability}}                         ga('set', 'dimension45', '{{{dueDateOfLiability}}}');                         {{/dueDateOfLiability}}
+                    {{#callForDirectDebitAssistance}}               ga('set', 'dimension46', '{{{callForDirectDebitAssistance}}}');               {{/callForDirectDebitAssistance}}
+                    {{#printApplicationCompletePage}}               ga('set', 'dimension47', '{{{printApplicationCompletePage}}}');               {{/printApplicationCompletePage}}
+                    {{#clickFeedbackLinkOnApplicationCompleteSide}} ga('set', 'dimension48', '{{{clickFeedbackLinkOnApplicationCompleteSide}}}'); {{/clickFeedbackLinkOnApplicationCompleteSide}}
+                    {{#voaPersonId}}                                ga('set', 'dimension49', '{{{voaPersonId}}}');                                {{/voaPersonId}}
+                    {{#optimizelyTests}}                            ga('set', 'dimension50', '{{{optimizelyTests}}}');                            {{/optimizelyTests}}
+                    {{#optimizely8228818209}}                       ga('set', 'dimension51', '{{{optimizely8228818209}}}');                       {{/optimizely8228818209}}
+                    {{#offPayrollEndClientName}}                    ga('set', 'dimension52', '{{{offPayrollEndClientName}}}');                    {{/offPayrollEndClientName}}
+                    {{#offPayrollJobTitle}}                         ga('set', 'dimension53', '{{{offPayrollJobTitle}}}');                         {{/offPayrollJobTitle}}
+                    {{#valueOfIycdcPayment}}                        ga('set', 'dimension54', '{{{valueOfIycdcPayment}}}');                        {{/valueOfIycdcPayment}}
+                    {{#iycdcReconciliationStatus}}                  ga('set', 'dimension55', '{{{iycdcReconciliationStatus}}}');                  {{/iycdcReconciliationStatus}}
+                    {{#p800Type}}                                   ga('set', 'dimension56', '{{{p800Type}}}');                                   {{/p800Type}}
+                    {{#p800TaxYearSpan}}                            ga('set', 'dimension69', '{{{p800TaxYearSpan}}}');                            {{/p800TaxYearSpan}}
+                    {{#taxCodeChangeDate}}                          ga('set', 'dimension76', '{{{taxCodeChangeDate}}}');                          {{/taxCodeChangeDate}}
+                    {{#taxCodeChangeEdgeCase}}                      ga('set', 'dimension77', '{{{taxCodeChangeEdgeCase}}}');                      {{/taxCodeChangeEdgeCase}}
+                    {{#taiLandingPageInformation}}                  ga('set', 'dimension78', '{{{taiLandingPageInformation}}}');                  {{/taiLandingPageInformation}}
+                    {{#taiCYPlusOneEstimatedIncome}}                ga('set', 'dimension80', '{{{taiCYPlusOneEstimatedIncome}}}');                {{/taiCYPlusOneEstimatedIncome}}
+                    {{#taiCYEstimatedIncome}}                       ga('set', 'dimension81', '{{{taiCYEstimatedIncome}}}');                       {{/taiCYEstimatedIncome}}
 
-                    {{#isWelsh}}
-                    Cysylltiadau cymorth
-                    {{/isWelsh}}
+                    {{#gaCustomEvent}}
+                        {{{gaCustomEvent}}}
+                    {{/gaCustomEvent}}
 
-                    {{^isWelsh}}
-                    Support links
-                    {{/isWelsh}}
+                    ga('send', 'pageview');
+                    ga('set', 'nonInteraction', true);
 
-                </h2>
-                <ul class="platform-help-links">
-                    <li>
-                        <a href="/help/cookies" target="_blank" data-sso="false" data-journey-click="footer:Click:Cookies">
+                </script>
+            {{/trackingId}}
+        {{/googleAnalytics}}
 
-                            {{#isWelsh}}
-                                Cwcis
-                            {{/isWelsh}}
+        {{#ssoUrl}}
+            <script type="text/javascript">var ssoUrl = "{{ssoUrl}}";</script>
+        {{/ssoUrl}}
 
-                            {{^isWelsh}}
-                                Cookies
-                            {{/isWelsh}}
+        {{#assetsPath}}
+            <script src="{{assetsPath}}javascripts/application.min.js" type="text/javascript"></script>
+        {{/assetsPath}}
 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/help/privacy" target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">
+        {{^assetsPath}}
+            <script src="/assets/3.11.0/javascripts/application.min.js" type="text/javascript"></script>
+        {{/assetsPath}}
 
-                            {{#isWelsh}}
-                                Polisi preifatrwydd
-                            {{/isWelsh}}
+        {{#scriptElems}}
+            {{#url}}
+                <script src="{{url}}" type="text/javascript"></script>
+            {{/url}}
+        {{/scriptElems}}
 
-                            {{^isWelsh}}
-                                Privacy policy
-                            {{/isWelsh}}
+        {{#sessionTimeout}}
+            {{#keepAliveUrl}}
+                {{#logoutUrl}}
+                    <script type="text/javascript">
+                        $.timeoutDialog({timeout: 900, countdown: 60, keep_alive_url: '{{{keepAliveUrl}}}', logout_url: '{{{logoutUrl}}}'});
+                    </script>
+                {{/logoutUrl}}
+            {{/keepAliveUrl}}
+        {{/sessionTimeout}}
 
-                        </a>
-                    </li>
+        {{#inlineScript}}
+            {{{inlineScript}}}
+        {{/inlineScript}}
 
-                    {{#termsAndConditionFooterLink}}
-                        {{#url}}
-                            {{#text}}
-                                <li><a href="{{{url}}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">{{{text}}}</a></li>
-                            {{/text}}
-                        {{/url}}
-                    {{/termsAndConditionFooterLink}}
-
-                    {{^termsAndConditionFooterLink}}
-                        <li>
-                            <a href="/help/terms-and-conditions" target="_blank" data-sso="false" data-journey-click="footer:Click:Terms and conditions">
-
-                                {{#isWelsh}}
-                                    Telerau ac amodau
-                                {{/isWelsh}}
-
-                                {{^isWelsh}}
-                                    Terms and conditions
-                                {{/isWelsh}}
-
-                            </a>
-                        </li>
-                    {{/termsAndConditionFooterLink}}
-                    <li>
-                        <a href="https://www.gov.uk/help" target="_blank" rel="noopener noreferrer" data-sso="false" data-journey-click="footer:Click:Help">
-
-                            {{#isWelsh}}
-                                Help wrth ddefnyddio GOV.UK
-                            {{/isWelsh}}
-
-                            {{^isWelsh}}
-                                Help using GOV.UK
-                            {{/isWelsh}}
-
-                        </a>
-                    </li>
-
-                    {{#additionalFooterLinks}}
-                        {{#url}}
-                            {{#text}}
-                                <li><a href="{{{url}}}">{{text}}</a></li>
-                            {{/text}}
-                        {{/url}}
-                    {{/additionalFooterLinks}}
-                </ul>
-
-                <div class="open-government-licence">
-                    <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">
-
-                        <img src="/template/assets/images/open-government-licence_2x.png" alt="Open Government Licence">
-
-                    </a>
-                    </h2>
-                    <p>
-
-                        {{#isWelsh}}
-                            Mae&#39;r holl gynnwys ar gael dan y <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">Drwydded Llywodraeth Agored, fersiwn 3.0</a>, oni nodir yn wahanol
-                        {{/isWelsh}}
-
-                        {{^isWelsh}}
-                            All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" target="_blank" rel="noopener noreferrer">Open Government Licence v3.0</a>, except where otherwise stated
-                        {{/isWelsh}}
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank" rel="noopener noreferrer">
-
-                    {{#isWelsh}}
-                        &copy; Hawlfraint y Goron
-                    {{/isWelsh}}
-
-                    {{^isWelsh}}
-                        &copy; Crown Copyright
-                    {{/isWelsh}}
-
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!--end footer-->
-
-<div id="global-app-error" class="app-error hidden"></div>
-
-{{#googleAnalytics}}
-    {{#trackingId}}
-        <script type="text/javascript">
-
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', '{{trackingId}}', '{{#cookieDomain}}{{cookieDomain}}{{/cookieDomain}}{{^cookieDomain}}auto{{/cookieDomain}}');
-            ga('set', 'anonymizeIp', true);
-
-            {{#fullPagePath}}                               ga('set', 'dimension1', '{{{fullPagePath}}}');                                {{/fullPagePath}}
-            {{#taxType}}                                    ga('set', 'dimension2', '{{{taxType}}}');                                     {{/taxType}}
-            {{#cardType}}                                   ga('set', 'dimension3', '{{{cardType}}}');                                    {{/cardType}}
-            {{#userStatus}}                                 ga('set', 'dimension4', '{{{userStatus}}}');                                  {{/userStatus}}
-            {{#experimentCohorts}}                          ga('set', 'dimension5', '{{{experimentCohorts}}}');                           {{/experimentCohorts}}
-            {{#identityVerificationLoginOrigin}}            ga('set', 'dimension6', '{{{identityVerificationLoginOrigin}}}');             {{/identityVerificationLoginOrigin}}
-            {{#scenarioType}}                               ga('set', 'dimension7', '{{{scenarioType}}}');                                {{/scenarioType}}
-            {{#forecastValue}}                              ga('set', 'dimension8', '{{{forecastValue}}}');                               {{/forecastValue}}
-            {{#qualifyingYears}}                            ga('set', 'dimension10', '{{{qualifyingYears}}}');                            {{/qualifyingYears}}
-            {{#gaps}}                                       ga('set', 'dimension11', '{{{gaps}}}');                                       {{/gaps}}
-            {{#payableGaps}}                                ga('set', 'dimension12', '{{{payableGaps}}}');                                {{/payableGaps}}
-            {{#yearsToContribute}}                          ga('set', 'dimension13', '{{{yearsToContribute}}}');                          {{/yearsToContribute}}
-            {{#contractedOut}}                              ga('set', 'dimension14', '{{{contractedOut}}}');                              {{/contractedOut}}
-            {{#statePensionAge}}                            ga('set', 'dimension15', '{{{statePensionAge}}}');                            {{/statePensionAge}}
-            {{#copeAmount}}                                 ga('set', 'dimension16', '{{{copeAmount}}}');                                 {{/copeAmount}}
-            {{#startDate}}                                  ga('set', 'dimension17', '{{{startDate}}}');                                  {{/startDate}}
-            {{#returnCount}}                                ga('set', 'dimension18', '{{{returnCount}}}');                                {{/returnCount}}
-            {{#referenceNumber}}                            ga('set', 'dimension19', '{{{referenceNumber}}}');                            {{/referenceNumber}}
-            {{#nispExclusionType}}                          ga('set', 'dimension20', '{{{nispExclusionType}}}');                          {{/nispExclusionType}}
-            {{#forecastOnly}}                               ga('set', 'dimension21', '{{{forecastOnly}}}');                               {{/forecastOnly}}
-            {{#authenticationProvider}}                     ga('set', 'dimension22', '{{{authenticationProvider}}}');                     {{/authenticationProvider}}
-            {{#sosOrigin}}                                  ga('set', 'dimension23', '{{{sosOrigin}}}');                                  {{/sosOrigin}}
-            {{#sosJourneyType}}                             ga('set', 'dimension24', '{{{sosJourneyType}}}');                             {{/sosJourneyType}}
-            {{#sosConfidenceValue}}                         ga('set', 'dimension25', '{{{sosConfidenceValue}}}');                         {{/sosConfidenceValue}}
-            {{#tamcMultiYearApplication}}                   ga('set', 'dimension26', '{{{tamcMultiYearApplication}}}');                   {{/tamcMultiYearApplication}}
-            {{#tamcCurrentYearOnly}}                        ga('set', 'dimension27', '{{{tamcCurrentYearOnly}}}');                        {{/tamcCurrentYearOnly}}
-            {{#tamcPreviousYearOnly}}                       ga('set', 'dimension28', '{{{tamcPreviousYearOnly}}}');                       {{/tamcPreviousYearOnly}}
-            {{#tamcTransferorChangeInYourIncome}}           ga('set', 'dimension29', '{{{tamcTransferorChangeInYourIncome}}}');           {{/tamcTransferorChangeInYourIncome}}
-            {{#tamcTransferorCancels}}                      ga('set', 'dimension30', '{{{tamcTransferorCancels}}}');                      {{/tamcTransferorCancels}}
-            {{#tamcTransferorPreviousTaxYear}}              ga('set', 'dimension31', '{{{tamcTransferorPreviousTaxYear}}}');              {{/tamcTransferorPreviousTaxYear}}
-            {{#tamcTransferorChooseStartOfYear}}            ga('set', 'dimension32', '{{{tamcTransferorChooseStartOfYear}}}');            {{/tamcTransferorChooseStartOfYear}}
-            {{#tamcTransferorChooseEndOfYear}}              ga('set', 'dimension33', '{{{tamcTransferorChooseEndOfYear}}}');              {{/tamcTransferorChooseEndOfYear}}
-            {{#tamcRecipientDivorcesCurrentYear}}           ga('set', 'dimension34', '{{{tamcRecipientDivorcesCurrentYear}}}');           {{/tamcRecipientDivorcesCurrentYear}}
-            {{#tamcRecipientDivorcesPreviousYear}}          ga('set', 'dimension35', '{{{tamcRecipientDivorcesPreviousYear}}}');          {{/tamcRecipientDivorcesPreviousYear}}
-            {{#tamcRecipientRejects}}                       ga('set', 'dimension36', '{{{tamcRecipientRejects}}}');                       {{/tamcRecipientRejects}}
-            {{#tamcRecipientRejectsEndedRelationship}}      ga('set', 'dimension37', '{{{tamcRecipientRejectsEndedRelationship}}}');      {{/tamcRecipientRejectsEndedRelationship}}
-            {{#authProvider}}                               ga('set', 'dimension38', '{{{authProvider}}}');                               {{/authProvider}}
-            {{#confidenceLevel}}                            ga('set', 'dimension39', '{{{confidenceLevel}}}');                            {{/confidenceLevel}}
-            {{#ageOnVisit}}                                 ga('set', 'dimension40', '{{{ageOnVisit}}}');                                 {{/ageOnVisit}}
-            {{#gender}}                                     ga('set', 'dimension41', '{{{gender}}}');                                     {{/gender}}
-            {{#valueOfPayment}}                             ga('set', 'dimension42', '{{{valueOfPayment}}}');                             {{/valueOfPayment}}
-            {{#reconciliationStatus}}                       ga('set', 'dimension43', '{{{reconciliationStatus}}}');                       {{/reconciliationStatus}}
-            {{#paymentStatus}}                              ga('set', 'dimension44', '{{{paymentStatus}}}');                              {{/paymentStatus}}
-            {{#dueDateOfLiability}}                         ga('set', 'dimension45', '{{{dueDateOfLiability}}}');                         {{/dueDateOfLiability}}
-            {{#callForDirectDebitAssistance}}               ga('set', 'dimension46', '{{{callForDirectDebitAssistance}}}');               {{/callForDirectDebitAssistance}}
-            {{#printApplicationCompletePage}}               ga('set', 'dimension47', '{{{printApplicationCompletePage}}}');               {{/printApplicationCompletePage}}
-            {{#clickFeedbackLinkOnApplicationCompleteSide}} ga('set', 'dimension48', '{{{clickFeedbackLinkOnApplicationCompleteSide}}}'); {{/clickFeedbackLinkOnApplicationCompleteSide}}
-            {{#voaPersonId}}                                ga('set', 'dimension49', '{{{voaPersonId}}}');                                {{/voaPersonId}}
-            {{#optimizelyTests}}                            ga('set', 'dimension50', '{{{optimizelyTests}}}');                            {{/optimizelyTests}}
-            {{#optimizely8228818209}}                       ga('set', 'dimension51', '{{{optimizely8228818209}}}');                       {{/optimizely8228818209}}
-            {{#offPayrollEndClientName}}                    ga('set', 'dimension52', '{{{offPayrollEndClientName}}}');                    {{/offPayrollEndClientName}}
-            {{#offPayrollJobTitle}}                         ga('set', 'dimension53', '{{{offPayrollJobTitle}}}');                         {{/offPayrollJobTitle}}
-            {{#valueOfIycdcPayment}}                        ga('set', 'dimension54', '{{{valueOfIycdcPayment}}}');                        {{/valueOfIycdcPayment}}
-            {{#iycdcReconciliationStatus}}                  ga('set', 'dimension55', '{{{iycdcReconciliationStatus}}}');                  {{/iycdcReconciliationStatus}}
-            {{#p800Type}}                                   ga('set', 'dimension56', '{{{p800Type}}}');                                   {{/p800Type}}
-            {{#p800TaxYearSpan}}                            ga('set', 'dimension69', '{{{p800TaxYearSpan}}}');                            {{/p800TaxYearSpan}}
-            {{#taxCodeChangeDate}}                          ga('set', 'dimension76', '{{{taxCodeChangeDate}}}');                          {{/taxCodeChangeDate}}
-            {{#taxCodeChangeEdgeCase}}                      ga('set', 'dimension77', '{{{taxCodeChangeEdgeCase}}}');                      {{/taxCodeChangeEdgeCase}}
-            {{#taiLandingPageInformation}}                  ga('set', 'dimension78', '{{{taiLandingPageInformation}}}');                  {{/taiLandingPageInformation}}
-            {{#taiCYPlusOneEstimatedIncome}}                ga('set', 'dimension80', '{{{taiCYPlusOneEstimatedIncome}}}');                {{/taiCYPlusOneEstimatedIncome}}
-            {{#taiCYEstimatedIncome}}                       ga('set', 'dimension81', '{{{taiCYEstimatedIncome}}}');                       {{/taiCYEstimatedIncome}}
-
-            {{#gaCustomEvent}}
-                {{{gaCustomEvent}}}
-            {{/gaCustomEvent}}
-
-            ga('send', 'pageview');
-            ga('set', 'nonInteraction', true);
-
-        </script>
-    {{/trackingId}}
-{{/googleAnalytics}}
-
-{{#ssoUrl}}
-    <script type="text/javascript">var ssoUrl = "{{ssoUrl}}";</script>
-{{/ssoUrl}}
-
-{{#assetsPath}}
-    <script src="{{assetsPath}}javascripts/application.min.js" type="text/javascript"></script>
-{{/assetsPath}}
-{{^assetsPath}}
-    <script src="/assets/3.2.3/javascripts/application.min.js" type="text/javascript"></script>
-{{/assetsPath}}
-
-{{#scriptElems}}
-    {{#url}}
-        <script src="{{url}}" type="text/javascript"></script>
-    {{/url}}
-{{/scriptElems}}
-
-{{#sessionTimeout}}
-    {{#keepAliveUrl}}
-        {{#logoutUrl}}
-            <script type="text/javascript">
-                $.timeoutDialog({timeout: 900, countdown: 60, keep_alive_url: '{{{keepAliveUrl}}}', logout_url: '{{{logoutUrl}}}'});
-            </script>
-        {{/logoutUrl}}
-    {{/keepAliveUrl}}
-{{/sessionTimeout}}
-
-{{#inlineScript}}
-    {{{inlineScript}}}
-{{/inlineScript}}
-
-</body>
+    </body>
 </html>
