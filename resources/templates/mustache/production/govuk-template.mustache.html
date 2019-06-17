@@ -102,6 +102,10 @@
             {{/url}}
         {{/linkElems}}
 
+        {{#headInlineScript}}
+            {{{headInlineScript}}}
+        {{/headInlineScript}}
+
         {{#optimizelyProjectId}}
             <script src="{{#optimizelyBaseUrl}}{{{optimizelyBaseUrl}}}{{/optimizelyBaseUrl}}{{^optimizelyBaseUrl}}//cdn.optimizely.com/js/{{/optimizelyBaseUrl}}{{{optimizelyProjectId}}}.js" type="text/javascript"></script>
         {{/optimizelyProjectId}}
