@@ -1,0 +1,15 @@
+
+base.title.default                              = GOV.UK - The best place to find government services and information
+base.skip_link                                  = Skip to main content
+
+## Header messages
+header.homepage.alt                             = Go to the GOV.UK homepage
+
+## Footer messages
+footer.cookie_message                           = GOV.UK uses cookies to make the site simpler.
+footer.cookie_link                              = Find out more about cookies
+footer.ogl_message.start                        = All content is available under the
+footer.ogl_message.end                          = , except where otherwise stated
+footer.ogl                                      = Open Government Licence v3.0
+footer.ogl_logo.alt                             = Open Government Licence
+footer.crown_copyright                          = Crown Copyright
