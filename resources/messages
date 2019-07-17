@@ -4,10 +4,10 @@ base.skip_link                                  = Skip to main content
 
 ## Header messages
 header.homepage.alt                             = Go to the GOV.UK homepage
+header.cookie_message                           = GOV.UK uses cookies to make the site simpler.
+header.cookie_link                              = Find out more about cookies
 
 ## Footer messages
-footer.cookie_message                           = GOV.UK uses cookies to make the site simpler.
-footer.cookie_link                              = Find out more about cookies
 footer.ogl_message.start                        = All content is available under the
 footer.ogl_message.end                          = , except where otherwise stated
 footer.ogl                                      = Open Government Licence v3.0
