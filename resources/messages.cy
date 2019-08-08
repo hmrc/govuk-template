@@ -1,15 +1,15 @@
 
-base.title.default                              = GOV.UK - Welsh
-base.skip_link                                  = Skip Welsh
+base.title.default                              = GOV.UK
+base.skip_link                                  = Ewch yn syth i''r prif gynnwys
 
 ## Header messages
-header.homepage.alt                             = Welsh Go to homepage
-header.cookie_message                           = Welsh GOV.UK uses cookies to make the site simpler.
-header.cookie_link                              = Find out more about Welsh cookies
+header.homepage.alt                             = Ewch i''r hafan GOV.UK
+header.cookie_message                           = Mae GOV.UK yn defnyddio cwcis i hwyluso''r safle.
+header.cookie_link                              = Rhagor o wybodaeth am gwcis
 
 ## Footer messages
-footer.ogl_message.start                        = All Welsh content is available under the
-footer.ogl_message.end                          = , except where otherwise stated
-footer.ogl                                      = Open Welsh Government Licence v3.0
-footer.ogl_logo.alt                             = Open Welsh Government Licence
-footer.crown_copyright                          = Crown Copyright Welsh
+footer.ogl_message.start                        = Mae''r holl gynnwys ar gael dan y
+footer.ogl_message.end                          = , oni nodir yn wahanol
+footer.ogl                                      = Drwydded Llywodraeth Agored, fersiwn 3.0
+footer.ogl_logo.alt                             = Drwydded Llywodraeth Agored
+footer.crown_copyright                          = Hawlfraint y Goron
