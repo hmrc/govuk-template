@@ -33,13 +33,13 @@ object TestConstants {
   }
 
   object DefaultWelshContent {
-    val title = "GOV.UK"
+    val title = "GOV.UK – Y lle gorau i ddod o hyd i wasanaethau a gwybodaeth y llywodraeth"
     val skipLink = "Ewch yn syth i'r prif gynnwys"
-    val homepageAlt = "Ewch i'r hafan GOV.UK"
-    val cookieMessage = "Mae GOV.UK yn defnyddio cwcis i hwyluso'r safle."
+    val homepageAlt = "Ewch i hafan GOV.UK"
+    val cookieMessage = "Mae GOV.UK yn defnyddio cwcis i wneud y safle'n symlach."
     val cookieLink = "Rhagor o wybodaeth am gwcis"
-    val oglMessage = "Mae'r holl gynnwys ar gael dan y Drwydded Llywodraeth Agored, fersiwn 3.0, oni nodir yn wahanol"
-    val oglAlt = "Drwydded Llywodraeth Agored"
+    val oglMessage = "Mae'r holl gynnwys ar gael o dan y Drwydded Llywodraeth Agored v3.0, oni nodir yn wahanol"
+    val oglAlt = "y Drwydded Llywodraeth Agored"
     val crownCopyright = "Hawlfraint y Goron"
   }
 
