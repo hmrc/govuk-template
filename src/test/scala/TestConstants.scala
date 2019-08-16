@@ -33,14 +33,14 @@ object TestConstants {
   }
 
   object DefaultWelshContent {
-    val title = "GOV.UK - Welsh"
-    val skipLink = "Skip Welsh"
-    val homepageAlt = "Welsh Go to homepage"
-    val cookieMessage = "Welsh GOV.UK uses cookies to make the site simpler."
-    val cookieLink = "Find out more about Welsh cookies"
-    val oglMessage = "All Welsh content is available under the Open Welsh Government Licence v3.0, except where otherwise stated"
-    val oglAlt = "Open Welsh Government Licence"
-    val crownCopyright = "Crown Copyright Welsh"
+    val title = "GOV.UK – Y lle gorau i ddod o hyd i wasanaethau a gwybodaeth y llywodraeth"
+    val skipLink = "Ewch yn syth i'r prif gynnwys"
+    val homepageAlt = "Ewch i hafan GOV.UK"
+    val cookieMessage = "Mae GOV.UK yn defnyddio cwcis i wneud y safle'n symlach."
+    val cookieLink = "Rhagor o wybodaeth am gwcis"
+    val oglMessage = "Mae'r holl gynnwys ar gael o dan y Drwydded Llywodraeth Agored v3.0, oni nodir yn wahanol"
+    val oglAlt = "y Drwydded Llywodraeth Agored"
+    val crownCopyright = "Hawlfraint y Goron"
   }
 
 }
