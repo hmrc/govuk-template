@@ -642,6 +642,13 @@
                                     {{/isWelsh}}
                                 </a>
                             </li>
+
+                            {{#accessibilityFooterUrl}}
+                                <li>
+                                    <a href="{{accessibilityFooterUrl}}" data-sso="false" data-journey-click="footer:Click:Accessibility">Accessibility</a>
+                                </li>
+                            {{/accessibilityFooterUrl}}
+
                             <li>
                                 <a href="/help/privacy" target="_blank" data-sso="false" data-journey-click="footer:Click:Privacy policy">
                                     {{#isWelsh}}
