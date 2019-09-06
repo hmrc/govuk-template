@@ -16,20 +16,26 @@
 
 package uk.gov.hmrc.govuktemplate.test
 
+import java.io.File
+
 import org.scalatest.{Matchers, WordSpec}
-import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import play.api.i18n.{Lang, Messages, MessagesApi}
+import org.scalatestplus.play.guice.{GuiceOneAppPerSuite, GuiceOneServerPerSuite}
+import play.api.i18n._
 import play.twirl.api.Html
 import views.html.layouts.govuk_template
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
+import org.scalatestplus.play.PlaySpec
+import play.api.{Configuration, Environment, Mode}
+import play.api.inject.guice.GuiceApplicationBuilder
+import play.api.libs.logback.LogbackLoggerConfigurator
+import play.test.WithApplication
 import uk.gov.hmrc.govuktemplate.test.TestConstants._
 
-class LanguageSettingSpec extends WordSpec with Matchers with GuiceOneAppPerSuite {
+class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
 
   val messagesApi = app.injector.instanceOf[MessagesApi]
-
 
   implicit class GovUkTemplateDoc (doc: Document) {
     def htmlTag: Elements = doc.select("html")
@@ -64,53 +70,53 @@ class LanguageSettingSpec extends WordSpec with Matchers with GuiceOneAppPerSuit
   }
 
   "The Gov UK template" when {
-    "The language is English" should {
+    "The language is English" must {
       "Set the lang attribute to 'en'" in {
         val doc = Jsoup.parse(langView(englishLangCode).body)
-        doc.htmlTag.attr("lang") shouldBe englishLangCode
+        doc.htmlTag.attr("lang") mustBe englishLangCode
       }
 
       import DefaultEnglishContent._
 
       "Show default English content for the title if no title is provided" in {
         val doc = Jsoup.parse(langView(langCode = englishLangCode, title = None).body)
-        doc.title shouldBe title
+        doc.title mustBe title
       }
       "Show default English content in the header and footer" in {
         val doc = Jsoup.parse(langView(englishLangCode).body)
 
-        doc.skipLink.text() shouldBe skipLink
-        doc.logo.attr("title") shouldBe homepageAlt
-        doc.cookieMessage.text() should include (cookieMessage)
-        doc.cookieLink.text() shouldBe cookieLink
-        doc.oglLogo.attr("alt") shouldBe oglAlt
-        doc.oglMessage.text() shouldBe oglMessage
-        doc.crownCopyright.text() should include (crownCopyright)
+        doc.skipLink.text() mustBe skipLink
+        doc.logo.attr("title") mustBe homepageAlt
+        doc.cookieMessage.text() must include (cookieMessage)
+        doc.cookieLink.text() mustBe cookieLink
+        doc.oglLogo.attr("alt") mustBe oglAlt
+        doc.oglMessage.text() mustBe oglMessage
+        doc.crownCopyright.text() must include (crownCopyright)
       }
     }
 
-    "The language is Welsh" should {
+    "The language is Welsh" must {
       "Set the lang attribute to 'cy'" in {
         val doc = Jsoup.parse(langView(welshLangCode).body)
-        doc.select("html").attr("lang") shouldBe (welshLangCode)
+        doc.select("html").attr("lang") mustBe (welshLangCode)
       }
 
       import DefaultWelshContent._
 
       "Show default Welsh content for the title if no title is provided" in {
         val doc = Jsoup.parse(langView(langCode = welshLangCode, title = None).body)
-        doc.select("title").text() shouldBe title
+        doc.select("title").text() mustBe title
       }
       "Show default Welsh content in the header and footer" in {
         val doc = Jsoup.parse(langView(welshLangCode).body)
 
-        doc.skipLink.text() shouldBe skipLink
-        doc.logo.attr("title") shouldBe homepageAlt
-        doc.cookieMessage.text() should include (cookieMessage)
-        doc.cookieLink.text() shouldBe cookieLink
-        doc.oglLogo.attr("alt") shouldBe oglAlt
-        doc.oglMessage.text() shouldBe oglMessage
-        doc.crownCopyright.text() should include (crownCopyright)
+        doc.skipLink.text() mustBe skipLink
+        doc.logo.attr("title") mustBe homepageAlt
+        doc.cookieMessage.text() must include (cookieMessage)
+        doc.cookieLink.text() mustBe cookieLink
+        doc.oglLogo.attr("alt") mustBe oglAlt
+        doc.oglMessage.text() mustBe oglMessage
+        doc.crownCopyright.text() must include (crownCopyright)
       }
     }
   }
