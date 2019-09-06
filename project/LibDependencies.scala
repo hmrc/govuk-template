@@ -14,7 +14,9 @@ object LibDependencies {
 
   val test: Seq[ModuleID] = Seq(
     "org.scalatest" %% "scalatest" % "3.0.5" % Test,
-    "org.pegdown"   %  "pegdown"   % "1.6.0" % Test
+    "org.pegdown"   %  "pegdown"   % "1.6.0" % Test,
+    "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.1" % Test,
+    "org.jsoup" % "jsoup" % "1.12.1" % Test
   )
 
   // downgrade twirl for play 2.5 compatibility
