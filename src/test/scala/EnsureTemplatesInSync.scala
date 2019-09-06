@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.govuktemplate.test
-
 import java.io.File
+
 import org.scalatest.{Matchers, WordSpec}
+
 import scala.io.Source
 
 class EnsureTemplatesInSync extends WordSpec with Matchers {
