@@ -14,24 +14,15 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.govuktemplate.test
-
-import java.io.File
-
-import org.scalatest.{Matchers, WordSpec}
-import org.scalatestplus.play.guice.{GuiceOneAppPerSuite, GuiceOneServerPerSuite}
-import play.api.i18n._
-import play.twirl.api.Html
-import views.html.layouts.govuk_template
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
 import org.scalatestplus.play.PlaySpec
-import play.api.{Configuration, Environment, Mode}
-import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.logback.LogbackLoggerConfigurator
-import play.test.WithApplication
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import play.api.i18n._
+import play.twirl.api.Html
 import uk.gov.hmrc.govuktemplate.test.TestConstants._
+import views.html.layouts.GovUkTemplate
 
 class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
 
@@ -48,12 +39,12 @@ class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
     def crownCopyright: Elements = doc.select("[class=copyright]")
   }
 
-  def langMessages(langCode: String): Messages = new Messages(lang = Lang(langCode), messagesApi)
+  def langMessages(langCode: String): Messages = new MessagesImpl(lang = Lang(langCode), messagesApi)
 
   def langView(langCode: String, title: Option[String] = Some("")): Html = {
     implicit val messages = langMessages(langCode)
 
-    govuk_template(
+    new GovUkTemplate().apply(
       title = title,
       bodyClasses = None
     )(

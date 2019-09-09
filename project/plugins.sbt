@@ -18,5 +18,5 @@ val playPlugin =
 
 addSbtPlugin(playPlugin)
 
-addSbtPlugin("uk.gov.hmrc" % "sbt-play-cross-compilation" % "0.15.0")
+addSbtPlugin("uk.gov.hmrc" % "sbt-play-cross-compilation" % "0.17.0")
 
