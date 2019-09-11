@@ -12,7 +12,22 @@ object LibDependencies {
       )
     )
 
-  val test: Seq[ModuleID] = Seq(
+  val test: Seq[ModuleID] =
+    PlayCrossCompilation.dependencies(
+      play25 = Seq(
+        "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+        "org.pegdown"   %  "pegdown"   % "1.6.0" % Test,
+        "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.1" % Test,
+        "org.jsoup" % "jsoup" % "1.12.1" % Test
+      ),
+      play26 = Seq(
+        "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+        "org.pegdown"   %  "pegdown"   % "1.6.0" % Test,
+        "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
+        "org.jsoup" % "jsoup" % "1.12.1" % Test
+      )
+    )
+    Seq(
     "org.scalatest" %% "scalatest" % "3.0.5" % Test,
     "org.pegdown"   %  "pegdown"   % "1.6.0" % Test,
     "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.1" % Test,
