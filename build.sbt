@@ -9,7 +9,10 @@ lazy val library = Project(appName, file("."))
     majorVersion := 5,
     makePublicallyAvailableOnBintray := true,
     name := appName,
-    scalaVersion := "2.11.12",
+    scalaVersion := {
+      if (PlayCrossCompilation.playVersion == Play25) "2.11.12"
+      else "2.12.8"
+    },
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
     dependencyOverrides ++= LibDependencies.overrides,
     resolvers := Seq(
