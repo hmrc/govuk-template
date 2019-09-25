@@ -653,7 +653,15 @@
 
                             {{#accessibilityFooterUrl}}
                                 <li>
-                                    <a href="{{accessibilityFooterUrl}}" data-sso="false" data-journey-click="footer:Click:Accessibility">Accessibility</a>
+                                    <a href="{{accessibilityFooterUrl}}" target="_blank" data-sso="false" data-journey-click="footer:Click:Accessibility">
+                                        {{#isWelsh}}
+                                            Datganiad
+                                        {{/isWelsh}}
+                                        
+                                        {{^isWelsh}}
+                                            Accessibility
+                                        {{/isWelsh}}
+                                    </a>
                                 </li>
                             {{/accessibilityFooterUrl}}
 
