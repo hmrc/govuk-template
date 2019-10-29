@@ -397,7 +397,7 @@
                                         {{/isGovernmentGateway}}
 
                                         {{#isVerify}}
-                                            <div class="column-one-third subnav__section">
+                                            <div class="column-half subnav__section">
                                                 <p class="subnav__section__heading">
                                                     {{#isWelsh}}
                                                         Gosodiadau diogelwch
@@ -423,8 +423,7 @@
 
                                         {{^isVerify}}
                                             <div class="{{^isGovernmentGateway}}column-half {{/isGovernmentGateway}}
-                                                    {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                                    {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
+                                                    {{#isGovernmentGateway}}column-one-third{{/isGovernmentGateway}}
                                                     subnav__section">
                                                 <p class="subnav__section__heading">
                                                     {{#isWelsh}}
@@ -450,9 +449,8 @@
                                         {{/isVerify}}
 
                                         <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
-                                                        {{#isGovernmentGateway}}{{^isSa}} column-half {{/isSa}}{{/isGovernmentGateway}}
-                                                        {{#isGovernmentGateway}}{{#isSa}} column-one-third {{/isSa}}{{/isGovernmentGateway}}
-                                                        {{#isVerify}} column-one-third {{/isVerify}} subnav__section">
+                                                        {{#isGovernmentGateway}} column-one-third {{/isGovernmentGateway}}
+                                                        {{#isVerify}} column-half {{/isVerify}} subnav__section">
                                             <p class="subnav__section__heading">
                                                 {{#isWelsh}}
                                                     Manylion personol
@@ -474,6 +472,33 @@
                                                 </a>
                                             </div>
                                         </div>
+
+                                        {{#isGovernmentGateway}}
+                                        {{#profileUrl}}
+                                        <div class=" column-one-third subnav__section">
+                                            <p class="subnav__section__heading">
+                                                {{#isWelsh}}
+                                                Manylion mewngofnodi
+                                                {{/isWelsh}}
+
+                                                {{^isWelsh}}
+                                                Sign-in details
+                                                {{/isWelsh}}
+                                            </p>
+                                            <div>
+                                                <a href="{{{profileUrl}}}" data-journey-click="link - click:utility-nav:Manage your Government Gateway details">
+                                                    {{#isWelsh}}
+                                                    Rheoli&#39;ch manylion Porth y Llywodraeth
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                    Manage your Government Gateway details
+                                                    {{/isWelsh}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                        {{/profileUrl}}
+                                        {{/isGovernmentGateway}}
                                     </div>
                                 </li>
 
