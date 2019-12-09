@@ -887,6 +887,20 @@
         {{#inlineScript}}
             {{{inlineScript}}}
         {{/inlineScript}}
+        
+           {{#nuanceWebChat}}
+            {{#isWebchatEnabled}}
+                <script id="webchat-tag" type="text/javascript" src="https://hmrc-uk.digital.nuance.com/chatskins/launch/inqChatLaunch10006719.js"></script>
+                {{#nuanceId}}
+                    <script type="text/javascript">
+                        var nuanceData =
+                            {
+                                'sessionId': '{{{nuanceId}}}'
+                            }
+                    </script>
+                {{/nuanceId}}
+            {{/isWebchatEnabled}}
+        {{/nuanceWebChat}}
 
     </body>
 </html>
