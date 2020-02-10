@@ -327,21 +327,23 @@
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="/personal-account/messages" class="account-menu__link{{#activeTabMessages}} account-menu__link--active{{/activeTabMessages}}" data-journey-click="link - click:utility-nav:Messages">
-                                        {{#isWelsh}}
-                                            Negeseuon
-                                        {{/isWelsh}}
+                                {{#isGovernmentGateway}}
+                                    <li>
+                                        <a href="/personal-account/messages" class="account-menu__link{{#activeTabMessages}} account-menu__link--active{{/activeTabMessages}}" data-journey-click="link - click:utility-nav:Messages">
+                                            {{#isWelsh}}
+                                                Negeseuon
+                                            {{/isWelsh}}
 
-                                        {{^isWelsh}}
-                                            Messages
-                                        {{/isWelsh}}
+                                            {{^isWelsh}}
+                                                Messages
+                                            {{/isWelsh}}
 
-                                        {{#unreadMessageCount}}
-                                            <span class="badge" aria-label="Number of unread messages">{{unreadMessageCount}}</span>
-                                        {{/unreadMessageCount}}
-                                    </a>
-                                </li>
+                                            {{#unreadMessageCount}}
+                                                <span class="badge" aria-label="Number of unread messages">{{unreadMessageCount}}</span>
+                                            {{/unreadMessageCount}}
+                                        </a>
+                                    </li>
+                                {{/isGovernmentGateway}}
 
                                 <li>
                                     <a href="/track" class="account-menu__link{{#activeTabCheckProgress}} account-menu__link--active{{/activeTabCheckProgress}}" data-journey-click="link - click:utility-nav:Check progress">
