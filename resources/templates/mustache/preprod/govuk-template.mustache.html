@@ -157,7 +157,15 @@
 
         <div id="skiplink-container">
             <div>
-                <a href="#skipto" class="skiplink">Skip to main content</a>
+                <a href="#skipto" class="skiplink">
+                    {{#isWelsh}}
+                        Ewch yn syth i&rsquo;r prif gynnwys
+                    {{/isWelsh}}
+
+                    {{^isWelsh}}
+                        Skip to main content
+                    {{/isWelsh}}
+                </a>
             </div>
         </div>
 
@@ -196,15 +204,15 @@
                                             {{#cyUrl}}
                                                 {{#isWelsh}}
                                                     <li>
-                                                        <a id="switchToEnglish" lang="en" href="{{enUrl}}" data-journey-click="link - click:lang-select:English"><small><strong class="bold">English</strong></small></a>
-                                                        <span class="faded-text--small"><strong class="bold">| Cymraeg</strong></span>
+                                                        <a id="switchToEnglish" lang="en" href="{{enUrl}}" data-journey-click="link - click:lang-select:English" aria-label="Select English">English</a>
+                                                        <span class="faded-text--small bold" aria-hidden="true">| Cymraeg</span>
                                                     </li>
                                                 {{/isWelsh}}
 
                                                 {{^isWelsh}}
                                                     <li>
-                                                        <span class="faded-text--small"><strong class="bold">English |</strong></span>
-                                                        <a id="switchToWelsh" lang="cy" href="{{cyUrl}}" data-journey-click="link - click:lang-select:Cymraeg"><small><strong class="bold">Cymraeg</strong></small></a>
+                                                        <span class="faded-text--small bold" aria-hidden="true">English |</span>
+                                                        <a id="switchToWelsh" lang="cy" href="{{cyUrl}}" data-journey-click="link - click:lang-select:Cymraeg" aria-label="Dewiswch Cymraeg">Cymraeg</a>
                                                     </li>
                                                 {{/isWelsh}}
                                             {{/cyUrl}}
@@ -278,6 +286,28 @@
                 </div>
             </div>
         {{/fullWidthBannerTitle}}
+
+        {{#covidBannerTitle}}
+        <div id="covid-banner" class="covid-banner">
+            <div class="centered-content visible covid-banner__container" aria-hidden="false">
+                <div class="covid-banner__title">
+                    {{#covidBannerLink}}
+                    <a id="covid-banner-link" href="{{covidBannerLink}}" target="_blank" data-journey-click="link - click:{{covidBannerGaAction}}:{{covidBannerText}}">
+                        {{covidBannerTitle}}
+                    </a>
+                    {{/covidBannerLink}}
+                </div>
+
+                {{#covidBannerDismissText}}
+                <a class="covid-banner__close" href="#" role="button">
+                                    <span aria-hidden="true">
+                                        {{covidBannerDismissText}}
+                                    </span>
+                </a>
+                {{/covidBannerDismissText}}
+            </div>
+        </div>
+        {{/covidBannerTitle}}
 
         <main id="wrapper" role="main" {{#mainClass}}class="{{mainClass}}"{{/mainClass}} {{{mainAttributes}}}>
             <div id="content">
@@ -395,7 +425,7 @@
 
                                         {{^isVerify}}
                                             <div class="{{^isGovernmentGateway}}column-half {{/isGovernmentGateway}}
-                                                    {{#isGovernmentGateway}}column-one-third{{/isGovernmentGateway}}
+                                                    {{#isGovernmentGateway}} column-one-third {{/isGovernmentGateway}}
                                                     subnav__section">
                                                 <p class="subnav__section__heading">
                                                     {{#isWelsh}}
@@ -445,32 +475,32 @@
                                             </div>
                                         </div>
 
-                                        {{#isGovernmentGateway}}
-                                        {{#profileUrl}}
+                                    {{#isGovernmentGateway}}
+                                    {{#profileUrl}}
                                         <div class=" column-one-third subnav__section">
                                             <p class="subnav__section__heading">
                                                 {{#isWelsh}}
-                                                Manylion mewngofnodi
+                                                    Manylion mewngofnodi
                                                 {{/isWelsh}}
 
                                                 {{^isWelsh}}
-                                                Sign-in details
+                                                    Sign-in details
                                                 {{/isWelsh}}
                                             </p>
                                             <div>
                                                 <a href="{{{profileUrl}}}" data-journey-click="link - click:utility-nav:Manage your Government Gateway details">
                                                     {{#isWelsh}}
-                                                    Rheoli&#39;ch manylion Porth y Llywodraeth
+                                                        Rheoli&#39;ch manylion Porth y Llywodraeth
                                                     {{/isWelsh}}
 
                                                     {{^isWelsh}}
-                                                    Manage your Government Gateway details
+                                                        Manage your Government Gateway details
                                                     {{/isWelsh}}
                                                 </a>
                                             </div>
                                         </div>
-                                        {{/profileUrl}}
-                                        {{/isGovernmentGateway}}
+                                    {{/profileUrl}}
+                                    {{/isGovernmentGateway}}
                                     </div>
                                 </li>
 
@@ -658,7 +688,15 @@
 
                             {{#accessibilityFooterUrl}}
                                 <li>
-                                    <a href="{{accessibilityFooterUrl}}" data-sso="false" data-journey-click="footer:Click:Accessibility">Accessibility</a>
+                                    <a href="{{accessibilityFooterUrl}}" data-sso="false" data-journey-click="footer:Click:Accessibility">
+                                        {{#isWelsh}}
+                                            Datganiad
+                                        {{/isWelsh}}
+
+                                        {{^isWelsh}}
+                                            Accessibility
+                                        {{/isWelsh}}
+                                    </a>
                                 </li>
                             {{/accessibilityFooterUrl}}
 
@@ -870,21 +908,22 @@
             {{{inlineScript}}}
         {{/inlineScript}}
 
+
         {{#nuanceWebChat}}
             {{#isWebchatEnabled}}
                 <div id="HMRC_Anchored_1"></div>
                 <script id="webchat-tag" type="text/javascript" src="https://hmrc-uk.digital.nuance.com/chatskins/launch/inqChatLaunch10006719.js"></script>
                 {{#nuanceId}}
-                    <script type="text/javascript">
-                        var nuanceData =
-                            {
-                                'sessionId': '{{nuanceId}}',
-                                'sessionID': '{{nuanceId}}'
-                            }
-                    </script>
+                <script type="text/javascript">
+                    var nuanceData =
+                        {
+                            'sessionId': '{{nuanceId}}',
+                            'sessionID': '{{nuanceId}}'
+                        }
+                </script>
                 {{/nuanceId}}
             {{/isWebchatEnabled}}
         {{/nuanceWebChat}}
-        
+
     </body>
 </html>
