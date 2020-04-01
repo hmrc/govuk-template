@@ -287,6 +287,28 @@
             </div>
         {{/fullWidthBannerTitle}}
 
+        {{#covidBannerTitle}}
+        <div id="covid-banner" class="covid-banner">
+            <div class="centered-content visible covid-banner__container" aria-hidden="false">
+                <div class="covid-banner__title">
+                    {{#covidBannerLink}}
+                    <a id="covid-banner-link" href="{{covidBannerLink}}" target="_blank" data-journey-click="link - click:{{covidBannerGaAction}}:{{covidBannerText}}">
+                        {{covidBannerTitle}}
+                    </a>
+                    {{/covidBannerLink}}
+                </div>
+
+                {{#covidBannerDismissText}}
+                <a class="covid-banner__close" href="#" role="button">
+                                    <span aria-hidden="true">
+                                        {{covidBannerDismissText}}
+                                    </span>
+                </a>
+                {{/covidBannerDismissText}}
+            </div>
+        </div>
+        {{/covidBannerTitle}}
+
         <main id="wrapper" role="main" {{#mainClass}}class="{{mainClass}}"{{/mainClass}} {{{mainAttributes}}}>
             <div id="content">
 
@@ -453,32 +475,32 @@
                                             </div>
                                         </div>
 
-                                        {{#isGovernmentGateway}}
-                                        {{#profileUrl}}
+                                    {{#isGovernmentGateway}}
+                                    {{#profileUrl}}
                                         <div class=" column-one-third subnav__section">
                                             <p class="subnav__section__heading">
                                                 {{#isWelsh}}
-                                                Manylion mewngofnodi
+                                                    Manylion mewngofnodi
                                                 {{/isWelsh}}
 
                                                 {{^isWelsh}}
-                                                Sign-in details
+                                                    Sign-in details
                                                 {{/isWelsh}}
                                             </p>
                                             <div>
                                                 <a href="{{{profileUrl}}}" data-journey-click="link - click:utility-nav:Manage your Government Gateway details">
                                                     {{#isWelsh}}
-                                                    Rheoli&#39;ch manylion Porth y Llywodraeth
+                                                        Rheoli&#39;ch manylion Porth y Llywodraeth
                                                     {{/isWelsh}}
 
                                                     {{^isWelsh}}
-                                                    Manage your Government Gateway details
+                                                        Manage your Government Gateway details
                                                     {{/isWelsh}}
                                                 </a>
                                             </div>
                                         </div>
-                                        {{/profileUrl}}
-                                        {{/isGovernmentGateway}}
+                                    {{/profileUrl}}
+                                    {{/isGovernmentGateway}}
                                     </div>
                                 </li>
 
@@ -670,7 +692,7 @@
                                         {{#isWelsh}}
                                             Datganiad
                                         {{/isWelsh}}
-                                        
+
                                         {{^isWelsh}}
                                             Accessibility
                                         {{/isWelsh}}
@@ -885,19 +907,20 @@
         {{#inlineScript}}
             {{{inlineScript}}}
         {{/inlineScript}}
-        
+
+
         {{#nuanceWebChat}}
             {{#isWebchatEnabled}}
                 <div id="HMRC_Anchored_1"></div>
                 <script id="webchat-tag" type="text/javascript" src="https://hmrc-uk.digital.nuance.com/chatskins/launch/inqChatLaunch10006719.js"></script>
                 {{#nuanceId}}
-                    <script type="text/javascript">
-                        var nuanceData =
-                            {
-                                'sessionId': '{{nuanceId}}',
-                                'sessionID': '{{nuanceId}}'
-                            }
-                    </script>
+                <script type="text/javascript">
+                    var nuanceData =
+                        {
+                            'sessionId': '{{nuanceId}}',
+                            'sessionID': '{{nuanceId}}'
+                        }
+                </script>
                 {{/nuanceId}}
             {{/isWebchatEnabled}}
         {{/nuanceWebChat}}
