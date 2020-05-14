@@ -18,11 +18,8 @@ lazy val library = Project(appName, file("."))
     ),
     crossScalaVersions := Seq("2.11.12", "2.12.10"),
     routesGenerator    := {
-      if (PlayCrossCompilation.playVersion == Play25) {
-        StaticRoutesGenerator
-      } else {
-        InjectedRoutesGenerator
-      }
+      if (PlayCrossCompilation.playVersion == Play25) loadObject[play.routes.compiler.RoutesGenerator]("play.routes.compiler.StaticRoutesGenerator") // not available on classpath with Play_27
+      else InjectedRoutesGenerator
     },
     (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += {
       val twirlDir =
@@ -38,3 +35,11 @@ lazy val library = Project(appName, file("."))
   )
   .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
   .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
+
+def loadObject[T](objectName: String): T = {
+  import scala.reflect.runtime.universe
+  val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
+  val module = runtimeMirror.staticModule(objectName)
+  val obj = runtimeMirror.reflectModule(module)
+  obj.instance.asInstanceOf[T]
+}
