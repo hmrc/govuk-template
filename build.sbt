@@ -9,23 +9,17 @@ lazy val library = Project(appName, file("."))
     majorVersion := 5,
     makePublicallyAvailableOnBintray := true,
     name := appName,
-    scalaVersion := {
-      if (PlayCrossCompilation.playVersion == Play25) "2.11.12"
-      else "2.12.8"
-    },
+    scalaVersion := "2.12.10",
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
     dependencyOverrides ++= LibDependencies.overrides,
     resolvers := Seq(
       Resolver.bintrayRepo("hmrc", "releases"),
       Resolver.typesafeRepo("releases")
     ),
-    crossScalaVersions := Seq("2.11.12", "2.12.8"),
+    crossScalaVersions := Seq("2.11.12", "2.12.10"),
     routesGenerator    := {
-      if (PlayCrossCompilation.playVersion == Play25) {
-        StaticRoutesGenerator
-      } else {
-        InjectedRoutesGenerator
-      }
+      if (PlayCrossCompilation.playVersion == Play25) loadObject[play.routes.compiler.RoutesGenerator]("play.routes.compiler.StaticRoutesGenerator") // not available on classpath with Play_27
+      else InjectedRoutesGenerator
     },
     (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += {
       val twirlDir =
@@ -36,8 +30,16 @@ lazy val library = Project(appName, file("."))
         }
       baseDirectory.value / twirlDir
     },
-    de.heikoseeberger.sbtheader.HeaderKey.excludes += "**.mustache.html", // don't add licence headers to mustache templates
+    excludeFilter.in(unmanagedResources.in(headerCreate)) := "*.mustache.html", // don't add licence headers to mustache templates
     PlayCrossCompilation.playCrossCompilationSettings
   )
   .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
   .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
+
+def loadObject[T](objectName: String): T = {
+  import scala.reflect.runtime.universe
+  val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
+  val module = runtimeMirror.staticModule(objectName)
+  val obj = runtimeMirror.reflectModule(module)
+  obj.instance.asInstanceOf[T]
+}
