@@ -542,23 +542,21 @@
                     {{#backlinkUrl}}
                         <div class="grid-row">
                             <div class="column-half">
-                                <div aria-hidden="true">
-                                    <a href="{{backlinkUrl}}" class="link-back">
-                                        {{#backlinkUrlText}}
-                                            {{backlinkUrlText}}
-                                        {{/backlinkUrlText}}
+                                <a href="{{backlinkUrl}}" class="link-back">
+                                    {{#backlinkUrlText}}
+                                        {{backlinkUrlText}}
+                                    {{/backlinkUrlText}}
 
-                                        {{^backlinkUrlText}}
-                                            {{#isWelsh}}
-                                                Yn &#244;l
-                                            {{/isWelsh}}
+                                    {{^backlinkUrlText}}
+                                        {{#isWelsh}}
+                                            Yn &#244;l
+                                        {{/isWelsh}}
 
-                                            {{^isWelsh}}
-                                                Back
-                                            {{/isWelsh}}
-                                        {{/backlinkUrlText}}
-                                    </a>
-                                </div>
+                                        {{^isWelsh}}
+                                            Back
+                                        {{/isWelsh}}
+                                    {{/backlinkUrlText}}
+                                </a>
                             </div>
                         </div>
                     {{/backlinkUrl}}
@@ -578,22 +576,6 @@
                     <!-- begin article -->
                     {{{ article }}}
                     <!-- end article -->
-
-                    <!-- begin backlinkUrl (Screen Reader) -->
-                    {{#backlinkUrl}}
-                        <div class="visuallyhidden">
-                            <a href="{{backlinkUrl}}">
-                                {{#isWelsh}}
-                                    Yn &#244;l
-                                {{/isWelsh}}
-
-                                {{^isWelsh}}
-                                    Back
-                                {{/isWelsh}}
-                            </a>
-                        </div>
-                    {{/backlinkUrl}}
-                    <!-- end backlinkUrl (Screen Reader) -->
 
                     <!-- begin sidebar -->
                     {{{ sidebar }}}
