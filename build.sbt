@@ -14,10 +14,11 @@ lazy val library = Project(appName, file("."))
       Resolver.typesafeRepo("releases")
     ),
     crossScalaVersions := Seq("2.11.12", "2.12.10"),
-    routesGenerator    := InjectedRoutesGenerator,
-    (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/play-26/twirl"
-    ,
-    excludeFilter.in(unmanagedResources.in(headerCreate)) := "*.mustache.html", // don't add licence headers to mustache templates
+    routesGenerator := InjectedRoutesGenerator,
+    (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/play-26/twirl",
+    excludeFilter.in(
+      unmanagedResources.in(headerCreate)
+    ) := "*.mustache.html", // don't add licence headers to mustache templates
     PlayCrossCompilation.playCrossCompilationSettings
   )
   .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
