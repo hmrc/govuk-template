@@ -28,14 +28,14 @@ class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
 
   val messagesApi = app.injector.instanceOf[MessagesApi]
 
-  implicit class GovUkTemplateDoc (doc: Document) {
-    def htmlTag: Elements = doc.select("html")
-    def skipLink: Elements = doc.select("#skip-link")
-    def logo: Elements = doc.select("#logo")
-    def cookieMessage: Elements = doc.select("#cookie-info-message")
-    def cookieLink: Elements = doc.select("#cookie-info-link")
-    def oglLogo: Elements = doc.select("#ogl-logo")
-    def oglMessage: Elements = doc.select("#ogl-message")
+  implicit class GovUkTemplateDoc(doc: Document) {
+    def htmlTag: Elements        = doc.select("html")
+    def skipLink: Elements       = doc.select("#skip-link")
+    def logo: Elements           = doc.select("#logo")
+    def cookieMessage: Elements  = doc.select("#cookie-info-message")
+    def cookieLink: Elements     = doc.select("#cookie-info-link")
+    def oglLogo: Elements        = doc.select("#ogl-logo")
+    def oglMessage: Elements     = doc.select("#ogl-message")
     def crownCopyright: Elements = doc.select("[class=copyright]")
   }
 
@@ -78,18 +78,18 @@ class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
 
         doc.skipLink.text() mustBe skipLink
         doc.logo.attr("title") mustBe homepageAlt
-        doc.cookieMessage.text() must include (cookieMessage)
+        doc.cookieMessage.text()  must include(cookieMessage)
         doc.cookieLink.text() mustBe cookieLink
         doc.oglLogo.attr("alt") mustBe oglAlt
         doc.oglMessage.text() mustBe oglMessage
-        doc.crownCopyright.text() must include (crownCopyright)
+        doc.crownCopyright.text() must include(crownCopyright)
       }
     }
 
     "The language is Welsh" must {
       "Set the lang attribute to 'cy'" in {
         val doc = Jsoup.parse(langView(welshLangCode).body)
-        doc.select("html").attr("lang") mustBe (welshLangCode)
+        doc.select("html").attr("lang") mustBe welshLangCode
       }
 
       import DefaultWelshContent._
@@ -103,11 +103,11 @@ class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
 
         doc.skipLink.text() mustBe skipLink
         doc.logo.attr("title") mustBe homepageAlt
-        doc.cookieMessage.text() must include (cookieMessage)
+        doc.cookieMessage.text()  must include(cookieMessage)
         doc.cookieLink.text() mustBe cookieLink
         doc.oglLogo.attr("alt") mustBe oglAlt
         doc.oglMessage.text() mustBe oglMessage
-        doc.crownCopyright.text() must include (crownCopyright)
+        doc.crownCopyright.text() must include(crownCopyright)
       }
     }
   }

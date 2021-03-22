@@ -38,6 +38,8 @@ target
 
 .ensime*
 
+.bsp/
+
 **/codekit-config.json
 
 .cache
