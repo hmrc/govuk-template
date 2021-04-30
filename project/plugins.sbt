@@ -7,13 +7,13 @@ addSbtPlugin("uk.gov.hmrc" % "sbt-git-versioning" % "2.1.0")
 
 addSbtPlugin("uk.gov.hmrc" % "sbt-artifactory" % "1.0.0")
 
-val playPlugin =
-   sys.env.getOrElse("PLAY_VERSION", "2.6") match {
-    case "2.6" => "com.typesafe.play" % "sbt-plugin" % "2.6.20"
-    case "2.7" => "com.typesafe.play" % "sbt-plugin" % "2.7.4"
+addSbtPlugin(
+  sys.env.get("PLAY_VERSION") match {
+    case Some("2.8") => "com.typesafe.play" % "sbt-plugin" % "2.8.7"
+    case Some("2.7") => "com.typesafe.play" % "sbt-plugin" % "2.7.9"
+    case _           => "com.typesafe.play" % "sbt-plugin" % "2.6.25"
   }
+)
 
-addSbtPlugin(playPlugin)
-
-addSbtPlugin("uk.gov.hmrc" % "sbt-play-cross-compilation" % "0.20.0")
+addSbtPlugin("uk.gov.hmrc" % "sbt-play-cross-compilation" % "2.0.0")
 

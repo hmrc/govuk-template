@@ -1,14 +1,12 @@
+import play.core.PlayVersion
 import sbt.{ModuleID, _}
 
 object LibDependencies {
 
   val compile: Seq[ModuleID] =
     PlayCrossCompilation.dependencies(
-      play26 = Seq(
-        "com.typesafe.play" %% "play" % "2.6.20" % "provided"
-      ),
-      play27 = Seq(
-        "com.typesafe.play" %% "play" % "2.7.4" % "provided"
+      shared = Seq(
+        "com.typesafe.play" %% "play"            % PlayVersion.current
       )
     )
 
@@ -20,10 +18,13 @@ object LibDependencies {
         "org.jsoup"              % "jsoup"               % "1.12.1"   % Test
       ),
       play26 = Seq(
-        "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2"    % Test
+        "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.3" % Test
       ),
       play27 = Seq(
-        "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3"    % Test
+        "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
+      ),
+      play28 = Seq(
+        "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
       )
     )
 }

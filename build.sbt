@@ -9,7 +9,6 @@ lazy val library = Project(appName, file("."))
     name := appName,
     scalaVersion := "2.12.10",
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
-    crossScalaVersions := Seq("2.11.12", "2.12.10"),
     routesGenerator    := InjectedRoutesGenerator,
     (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/play-26/twirl"
     ,
