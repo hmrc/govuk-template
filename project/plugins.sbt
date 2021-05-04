@@ -11,7 +11,7 @@ val playPlugin =
    sys.env.getOrElse("PLAY_VERSION", "2.6") match {
     case "2.6" => "com.typesafe.play" % "sbt-plugin" % "2.6.20"
     case "2.7" => "com.typesafe.play" % "sbt-plugin" % "2.7.4"
-    case "2.8" => "com.typesafe.play" % "sbt-plugin" % "2.8.0"
+    case "2.8" => "com.typesafe.play" % "sbt-plugin" % "2.8.7"
   }
 
 addSbtPlugin(playPlugin)

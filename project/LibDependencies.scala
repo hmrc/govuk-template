@@ -11,7 +11,7 @@ object LibDependencies {
         "com.typesafe.play" %% "play" % "2.7.4" % "provided"
       ),
       play28 = Seq(
-        "com.typesafe.play" %% "play" % "2.8.0" % "provided"
+        "com.typesafe.play" %% "play" % "2.8.7" % "provided"
       )
     )
 
