@@ -7,11 +7,11 @@ lazy val library = Project(appName, file("."))
     majorVersion := 5,
     makePublicallyAvailableOnBintray := true,
     name := appName,
-    scalaVersion := "2.12.10",
+    scalaVersion := "2.12.12",
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
-    crossScalaVersions := Seq("2.11.12", "2.12.10"),
+    crossScalaVersions := Seq("2.11.12", "2.12.12"),
     routesGenerator    := InjectedRoutesGenerator,
-    (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/play-26/twirl"
+    (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/twirl"
     ,
     excludeFilter.in(unmanagedResources.in(headerCreate)) := "*.mustache.html", // don't add licence headers to mustache templates
     PlayCrossCompilation.playCrossCompilationSettings
