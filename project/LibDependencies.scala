@@ -20,7 +20,8 @@ object LibDependencies {
       shared = Seq(
         "org.scalatest" %% "scalatest" % "3.0.8" % Test,
         "org.jsoup" % "jsoup" % "1.12.1" % Test,
-        "com.vladsch.flexmark" % "flexmark-all" % "0.35.10" % Test
+        "com.vladsch.flexmark" % "flexmark-all" % "0.35.10" % Test,
+        "org.pegdown" % "pegdown" % "1.6.0" % Test
       ),
       play26 = Seq(
         "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
