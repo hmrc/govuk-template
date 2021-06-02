@@ -15,7 +15,7 @@ In order to use the template, you have to add this line to your application `rou
 ->     /template                       template.Routes
 ```
 
-### Installing
+#### Installing
 
 Add the following to your SBT build:
 ```scala
