@@ -4,8 +4,6 @@ base.skip_link                                  = Ewch yn syth i‘r prif gynnwy
 
 ## Header messages
 header.homepage.alt                             = Ewch i hafan GOV.UK
-header.cookie_message                           = Mae GOV.UK yn defnyddio cwcis i wneud y safle‘n symlach.
-header.cookie_link                              = Rhagor o wybodaeth am gwcis
 
 ## Footer messages
 footer.ogl_message.start                        = Mae‘r holl gynnwys ar gael o dan
