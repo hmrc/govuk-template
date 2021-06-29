@@ -1,11 +1,11 @@
 val appName = "govuk-template"
 
 lazy val library = Project(appName, file("."))
-  .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtArtifactory)
+  .enablePlugins(play.sbt.PlayScala)
   .disablePlugins(PlayLayoutPlugin)
   .settings(
     majorVersion := 5,
-    makePublicallyAvailableOnBintray := true,
+    isPublicArtefact := true,
     name := appName,
     scalaVersion := "2.12.12",
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
