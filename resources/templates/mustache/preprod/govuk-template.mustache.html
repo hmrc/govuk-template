@@ -346,15 +346,122 @@
                                 </li>
 
                                 <li>
-                                    <a href="/personal-account/your-profile" class="account-menu__link{{#activeTabYourProfile}} account-menu__link--active{{/activeTabYourProfile}}" data-journey-click="link - click:utility-nav:Your profile">
+                                    <a href="#subnav-your-account" id="account-menu__main-2" class="account-menu__link account-icon account-menu__link--more{{#activeTabYourAccount}} account-menu__link--active{{/activeTabYourAccount}}" aria-haspopup="true" aria-owns="subnav-your-account" data-journey-click="accordion - click:utility-nav:Your account">
                                         {{#isWelsh}}
-                                        Eich proffil
+                                            Eich cyfrif
                                         {{/isWelsh}}
 
                                         {{^isWelsh}}
-                                        Your profile
+                                            Your account
                                         {{/isWelsh}}
                                     </a>
+
+                                    <div class="subnav js-hidden" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
+
+                                        {{#isVerify}}
+                                            <div class="column-half subnav__section">
+                                                <p class="subnav__section__heading">
+                                                    {{#isWelsh}}
+                                                        Gosodiadau diogelwch
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                        Security settings
+                                                    {{/isWelsh}}
+                                                </p>
+                                                <div>
+                                                    <a href="/trusted-helpers/select-a-service" data-journey-click="link - click:utility-nav:Manage your trusted helpers">
+                                                        {{#isWelsh}}
+                                                            Rheoli&#39;ch cynorthwywyr y gellir ymddiried ynddynt
+                                                        {{/isWelsh}}
+
+                                                        {{^isWelsh}}
+                                                            Manage your trusted helpers
+                                                        {{/isWelsh}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {{/isVerify}}
+
+                                        {{^isVerify}}
+                                            <div class="{{^isGovernmentGateway}}column-half {{/isGovernmentGateway}}
+                                                    {{#isGovernmentGateway}} column-one-third {{/isGovernmentGateway}}
+                                                    subnav__section">
+                                                <p class="subnav__section__heading">
+                                                    {{#isWelsh}}
+                                                        Gosodiadau di-bapur
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                        Paperless settings
+                                                    {{/isWelsh}}
+                                                </p>
+                                                <div>
+                                                    <a href="/personal-account/preferences" data-journey-click="link - click:utility-nav:Manage your paperless settings">
+                                                        {{#isWelsh}}
+                                                            Rheoli&#39;ch gosodiadau di-bapur
+                                                        {{/isWelsh}}
+
+                                                        {{^isWelsh}}
+                                                            Manage your paperless settings
+                                                        {{/isWelsh}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {{/isVerify}}
+
+                                        <div class="{{^isGovernmentGateway}}{{^isVerify}} column-half {{/isVerify}}{{/isGovernmentGateway}}
+                                                        {{#isGovernmentGateway}} column-one-third {{/isGovernmentGateway}}
+                                                        {{#isVerify}} column-half {{/isVerify}} subnav__section">
+                                            <p class="subnav__section__heading">
+                                                {{#isWelsh}}
+                                                    Manylion personol
+                                                {{/isWelsh}}
+
+                                                {{^isWelsh}}
+                                                    Personal details
+                                                {{/isWelsh}}
+                                            </p>
+                                            <div>
+                                                <a href="/personal-account/personal-details" data-journey-click="link - click:utility-nav:Manage your personal details">
+                                                    {{#isWelsh}}
+                                                        Rheoli&#39;ch manylion personol
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                        Manage your personal details
+                                                    {{/isWelsh}}
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    {{#isGovernmentGateway}}
+                                    {{#profileUrl}}
+                                        <div class=" column-one-third subnav__section">
+                                            <p class="subnav__section__heading">
+                                                {{#isWelsh}}
+                                                    Manylion mewngofnodi
+                                                {{/isWelsh}}
+
+                                                {{^isWelsh}}
+                                                    Sign-in details
+                                                {{/isWelsh}}
+                                            </p>
+                                            <div>
+                                                <a href="{{{profileUrl}}}" data-journey-click="link - click:utility-nav:Manage your Government Gateway details">
+                                                    {{#isWelsh}}
+                                                        Rheoli&#39;ch manylion Porth y Llywodraeth
+                                                    {{/isWelsh}}
+
+                                                    {{^isWelsh}}
+                                                        Manage your Government Gateway details
+                                                    {{/isWelsh}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    {{/profileUrl}}
+                                    {{/isGovernmentGateway}}
+                                    </div>
                                 </li>
 
                                 {{#isGovernmentGateway}}
