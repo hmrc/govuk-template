@@ -493,27 +493,6 @@ select:focus,
           #global-header .header-proposition #proposition-links li a.active {
             color: #28a197; }
 
-/* Global cookie message */
-.js-enabled #global-cookie-message {
-  display: none;
-  /* shown with JS, always on for non-JS */ }
-
-#global-cookie-message {
-  padding: 0.5em 2em;
-  background-color: #d5e8f3; }
-  #global-cookie-message p {
-    font-family: "nta", Arial, sans-serif;
-    font-size: 19px;
-    line-height: 1.31579;
-    font-weight: 400;
-    text-transform: none;
-    margin: 0 auto;
-    max-width: 960px; }
-    @media (max-width: 640px) {
-      #global-cookie-message p {
-        font-size: 16px;
-        line-height: 1.25; } }
-
 /* Global footer */
 #footer {
   background-color: #dee0e2;

@@ -120,12 +120,6 @@
 
         @afterHeader
 
-        <div id="global-cookie-message">
-                <!-- Changed href of cookies to be relative path -->
-            <p id="cookie-info-message">@messages("header.cookie_message") <a id="cookie-info-link" href="/help/cookies">@messages("header.cookie_link")</a></p>
-
-        </div>
-
         @content
 
         <footer class="group js-footer" id="footer" role="contentinfo">
@@ -153,8 +147,6 @@
             <!--end footer-->
 
         <div id="global-app-error" class="app-error hidden"></div>
-
-            <!--<script src="@routes.Template.at("javascripts/govuk-template.js")" type="text/javascript"></script>-->
 
     @bodyEnd
   </body>
