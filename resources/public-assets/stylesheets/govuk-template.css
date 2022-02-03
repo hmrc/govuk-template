@@ -664,3 +664,10 @@ select:focus,
           #footer .footer-meta .copyright a {
             text-align: center;
             background-position: 50% 0%; } }
+
+/* Deprecated cookie banner */
+#global-cookie-message {
+  display: none;
+  visibility: hidden;
+}
+
