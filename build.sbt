@@ -16,8 +16,7 @@ lazy val library = Project(appName, file("."))
     routesGenerator    := InjectedRoutesGenerator,
     (sourceDirectories in (Compile, TwirlKeys.compileTemplates)) += baseDirectory.value / "src/main/twirl"
     ,
-    excludeFilter.in(unmanagedResources.in(headerCreate)) := "*.mustache.html", // don't add licence headers to mustache templates
-    PlayCrossCompilation.playCrossCompilationSettings
+    excludeFilter.in(unmanagedResources.in(headerCreate)) := "*.mustache.html" // don't add licence headers to mustache templates
   )
   .settings(unmanagedResourceDirectories in sbt.Compile += baseDirectory.value / "resources")
   .disablePlugins(sbt.plugins.JUnitXmlReportPlugin)
