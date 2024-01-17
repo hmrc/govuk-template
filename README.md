@@ -23,6 +23,7 @@ Add the following to your SBT build (please note the differences from Play 2.9 o
 
 * Play 2.8: `libraryDependencies += "uk.gov.hmrc" %% "govuk-template" % "5.80.0-play-28"`
 * Play 2.9: `libraryDependencies += "uk.gov.hmrc" %% "govuk-template-play-29" % "6.0.0"`
+* Play 3.0: `libraryDependencies += "uk.gov.hmrc" %% "govuk-template-play-30" % "7.0.0"`
 
 ## License ##
 

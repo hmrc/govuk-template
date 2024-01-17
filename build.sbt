@@ -1,10 +1,10 @@
 val scala2_13 = "2.13.12"
 
-lazy val root = Project("govuk-template-play-29", file("."))
+lazy val root = Project("govuk-template-play-30", file("."))
   .enablePlugins(play.sbt.PlayScala)
   .disablePlugins(PlayLayoutPlugin)
   .settings(
-    majorVersion := 6,
+    majorVersion := 7,
     isPublicArtefact := true,
     scalaVersion := scala2_13,
     libraryDependencies ++= LibDependencies.compile ++ LibDependencies.test,
