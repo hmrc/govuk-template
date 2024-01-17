@@ -1,4 +1,4 @@
-val scala2_13 = "2.13.7"
+val scala2_13 = "2.13.12"
 
 lazy val root = Project("govuk-template-play-29", file("."))
   .enablePlugins(play.sbt.PlayScala)
