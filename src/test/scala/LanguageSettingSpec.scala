@@ -37,7 +37,7 @@ class LanguageSettingSpec extends PlaySpec with GuiceOneAppPerSuite {
     def crownCopyright: Elements = doc.select("[class=copyright]")
   }
 
-  def langMessages(langCode: String): Messages = new MessagesImpl(lang = Lang(langCode), messagesApi)
+  def langMessages(langCode: String): Messages = MessagesImpl(lang = Lang(langCode), messagesApi)
 
   def langView(langCode: String, title: Option[String] = Some("")): Html = {
     implicit val messages = langMessages(langCode)
