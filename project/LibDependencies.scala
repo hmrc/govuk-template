@@ -3,7 +3,7 @@ import sbt.{ModuleID, _}
 object LibDependencies {
 
   val compile: Seq[ModuleID] = Seq(
-    "com.typesafe.play" %% "play" % "2.9.0"
+    "org.playframework" %% "play" % "3.0.0"
   )
 
   val test: Seq[ModuleID] = Seq(
