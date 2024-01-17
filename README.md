@@ -17,12 +17,12 @@ In order to use the template, you have to add this line to your application `rou
 
 ### Installing
 
-Add the following to your SBT build:
-```scala
-resolvers += Resolver.bintrayRepo("hmrc", "releases")
+This library has different releases for Play 2.8, Play 2.9, and Play 3.0.
 
-libraryDependencies += "uk.gov.hmrc" %% "govuk-template" % "[INSERT-VERSION]"
-```
+Add the following to your SBT build (please note the differences from Play 2.9 onwards):
+
+* Play 2.8: `libraryDependencies += "uk.gov.hmrc" %% "govuk-template" % "5.80.0-play-28"`
+* Play 2.9: `libraryDependencies += "uk.gov.hmrc" %% "govuk-template-play-29" % "6.0.0"`
 
 ## License ##
 
